@@ -1,0 +1,7 @@
+clang -std=gnu99 -Wall -fopenmp -fopenmp-targets=nvptx64-nvidia-cuda -Xopenmp-target -march=sm_70 -Rpass=openmp-opt -Rpass-missed=openmp-opt -Rpass-analysis=openmp-opt -Ofast -c main.c -o main.o
+clang -std=gnu99 -Wall -fopenmp -fopenmp-targets=nvptx64-nvidia-cuda -Xopenmp-target -march=sm_70 -Rpass=openmp-opt -Rpass-missed=openmp-opt -Rpass-analysis=openmp-opt -Ofast -c simulation.c -o simulation.o
+clang -std=gnu99 -Wall -fopenmp -fopenmp-targets=nvptx64-nvidia-cuda -Xopenmp-target -march=sm_70 -Rpass=openmp-opt -Rpass-missed=openmp-opt -Rpass-analysis=openmp-opt -Ofast -c io.c -o io.o
+clang -std=gnu99 -Wall -fopenmp -fopenmp-targets=nvptx64-nvidia-cuda -Xopenmp-target -march=sm_70 -Rpass=openmp-opt -Rpass-missed=openmp-opt -Rpass-analysis=openmp-opt -Ofast -c init.c -o init.o
+clang -std=gnu99 -Wall -fopenmp -fopenmp-targets=nvptx64-nvidia-cuda -Xopenmp-target -march=sm_70 -Rpass=openmp-opt -Rpass-missed=openmp-opt -Rpass-analysis=openmp-opt -Ofast -c material.c -o material.o
+clang -std=gnu99 -Wall -fopenmp -fopenmp-targets=nvptx64-nvidia-cuda -Xopenmp-target -march=sm_70 -Rpass=openmp-opt -Rpass-missed=openmp-opt -Rpass-analysis=openmp-opt -Ofast -c utils.c -o utils.o
+clang -std=gnu99 -Wall -fopenmp -fopenmp-targets=nvptx64-nvidia-cuda -Xopenmp-target -march=sm_70 -Rpass=openmp-opt -Rpass-missed=openmp-opt -Rpass-analysis=openmp-opt -Ofast main.o simulation.o io.o init.o material.o utils.o -o rsbench -lm

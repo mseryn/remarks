@@ -25,26 +25,26 @@ simulation.c:190:12: remark: Moving globalized variable to the stack. [OMP110] [
 simulation.c:139:12: remark: Moving globalized variable to the stack. [OMP110] [-Rpass=openmp-opt]
         RSComplex sigTfactors[4]; // Of length input.numL, which is always 4
                   ^
-simulation.c:323:10: remark: Moving globalized variable to the stack. [OMP110] [-Rpass=openmp-opt]
-                double denominator_left[10] = {
-                       ^
 simulation.c:310:10: remark: Moving globalized variable to the stack. [OMP110] [-Rpass=openmp-opt]
                 double neg_1n[10] = {
                        ^
 simulation.c:298:10: remark: Moving globalized variable to the stack. [OMP110] [-Rpass=openmp-opt]
                 double an[10] = {
+                       ^
+simulation.c:323:10: remark: Moving globalized variable to the stack. [OMP110] [-Rpass=openmp-opt]
+                double denominator_left[10] = {
                        ^
 simulation.c:236:9: remark: Moving globalized variable to the stack. [OMP110] [-Rpass=openmp-opt]
         double dist[12];
                ^
+simulation.c:298:10: remark: Moving globalized variable to the stack. [OMP110] [-Rpass=openmp-opt]
+                double an[10] = {
+                       ^
 simulation.c:323:10: remark: Moving globalized variable to the stack. [OMP110] [-Rpass=openmp-opt]
                 double denominator_left[10] = {
                        ^
 simulation.c:310:10: remark: Moving globalized variable to the stack. [OMP110] [-Rpass=openmp-opt]
                 double neg_1n[10] = {
-                       ^
-simulation.c:298:10: remark: Moving globalized variable to the stack. [OMP110] [-Rpass=openmp-opt]
-                double an[10] = {
                        ^
 simulation.c:190:12: remark: Moving globalized variable to the stack. [OMP110] [-Rpass=openmp-opt]
         RSComplex sigTfactors[4]; // Of length input.numL, which is always 4
