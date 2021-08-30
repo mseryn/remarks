@@ -1,0 +1,91 @@
+clang -std=gnu99 -Wall -fopenmp -fopenmp-targets=nvptx64-nvidia-cuda -Xopenmp-target -march=sm_70 -Rpass=openmp-opt -Rpass-analysis=openmp-opt -mllvm -openmp-opt-disable-folding -mllvm -openmp-opt-disable-spmdization -mllvm -openmp-opt-disable-state-machine-rewrite -Ofast -c main.c -o main.o
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different data layouts: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is '' whereas 'main.c' is 'e-i64:64-i128:128-v16:16-v32:32-n16:32:64'
+ [-Wlinker-warnings]
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different target triples: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is 'nvptx64-nvidia-gpulibs' whereas 'main.c' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+warning: linking module '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc': Linking two modules of different target triples: '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc' is 'nvptx64' whereas 'main.c' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+3 warnings generated.
+clang -std=gnu99 -Wall -fopenmp -fopenmp-targets=nvptx64-nvidia-cuda -Xopenmp-target -march=sm_70 -Rpass=openmp-opt -Rpass-analysis=openmp-opt -mllvm -openmp-opt-disable-folding -mllvm -openmp-opt-disable-spmdization -mllvm -openmp-opt-disable-state-machine-rewrite -Ofast -c simulation.c -o simulation.o
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different data layouts: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is '' whereas 'simulation.c' is 'e-i64:64-i128:128-v16:16-v32:32-n16:32:64'
+ [-Wlinker-warnings]
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different target triples: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is 'nvptx64-nvidia-gpulibs' whereas 'simulation.c' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+warning: linking module '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc': Linking two modules of different target triples: '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc' is 'nvptx64' whereas 'simulation.c' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+simulation.c:236:9: remark: Moving globalized variable to the stack. [OMP110] [-Rpass=openmp-opt]
+        double dist[12];
+               ^
+simulation.c:97:10: remark: Moving globalized variable to the stack. [OMP110] [-Rpass=openmp-opt]
+                double micro_xs[4];
+                       ^
+simulation.c:190:12: remark: Moving globalized variable to the stack. [OMP110] [-Rpass=openmp-opt]
+        RSComplex sigTfactors[4]; // Of length input.numL, which is always 4
+                  ^
+simulation.c:139:12: remark: Moving globalized variable to the stack. [OMP110] [-Rpass=openmp-opt]
+        RSComplex sigTfactors[4]; // Of length input.numL, which is always 4
+                  ^
+simulation.c:323:10: remark: Moving globalized variable to the stack. [OMP110] [-Rpass=openmp-opt]
+                double denominator_left[10] = {
+                       ^
+simulation.c:310:10: remark: Moving globalized variable to the stack. [OMP110] [-Rpass=openmp-opt]
+                double neg_1n[10] = {
+                       ^
+simulation.c:298:10: remark: Moving globalized variable to the stack. [OMP110] [-Rpass=openmp-opt]
+                double an[10] = {
+                       ^
+simulation.c:236:9: remark: Moving globalized variable to the stack. [OMP110] [-Rpass=openmp-opt]
+        double dist[12];
+               ^
+simulation.c:323:10: remark: Moving globalized variable to the stack. [OMP110] [-Rpass=openmp-opt]
+                double denominator_left[10] = {
+                       ^
+simulation.c:298:10: remark: Moving globalized variable to the stack. [OMP110] [-Rpass=openmp-opt]
+                double an[10] = {
+                       ^
+simulation.c:310:10: remark: Moving globalized variable to the stack. [OMP110] [-Rpass=openmp-opt]
+                double neg_1n[10] = {
+                       ^
+simulation.c:190:12: remark: Moving globalized variable to the stack. [OMP110] [-Rpass=openmp-opt]
+        RSComplex sigTfactors[4]; // Of length input.numL, which is always 4
+                  ^
+simulation.c:139:12: remark: Moving globalized variable to the stack. [OMP110] [-Rpass=openmp-opt]
+        RSComplex sigTfactors[4]; // Of length input.numL, which is always 4
+                  ^
+simulation.c:97:10: remark: Moving globalized variable to the stack. [OMP110] [-Rpass=openmp-opt]
+                double micro_xs[4];
+                       ^
+3 warnings generated.
+clang -std=gnu99 -Wall -fopenmp -fopenmp-targets=nvptx64-nvidia-cuda -Xopenmp-target -march=sm_70 -Rpass=openmp-opt -Rpass-analysis=openmp-opt -mllvm -openmp-opt-disable-folding -mllvm -openmp-opt-disable-spmdization -mllvm -openmp-opt-disable-state-machine-rewrite -Ofast -c io.c -o io.o
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different data layouts: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is '' whereas 'io.c' is 'e-i64:64-i128:128-v16:16-v32:32-n16:32:64'
+ [-Wlinker-warnings]
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different target triples: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is 'nvptx64-nvidia-gpulibs' whereas 'io.c' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+warning: linking module '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc': Linking two modules of different target triples: '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc' is 'nvptx64' whereas 'io.c' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+3 warnings generated.
+clang -std=gnu99 -Wall -fopenmp -fopenmp-targets=nvptx64-nvidia-cuda -Xopenmp-target -march=sm_70 -Rpass=openmp-opt -Rpass-analysis=openmp-opt -mllvm -openmp-opt-disable-folding -mllvm -openmp-opt-disable-spmdization -mllvm -openmp-opt-disable-state-machine-rewrite -Ofast -c init.c -o init.o
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different data layouts: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is '' whereas 'init.c' is 'e-i64:64-i128:128-v16:16-v32:32-n16:32:64'
+ [-Wlinker-warnings]
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different target triples: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is 'nvptx64-nvidia-gpulibs' whereas 'init.c' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+warning: linking module '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc': Linking two modules of different target triples: '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc' is 'nvptx64' whereas 'init.c' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+3 warnings generated.
+clang -std=gnu99 -Wall -fopenmp -fopenmp-targets=nvptx64-nvidia-cuda -Xopenmp-target -march=sm_70 -Rpass=openmp-opt -Rpass-analysis=openmp-opt -mllvm -openmp-opt-disable-folding -mllvm -openmp-opt-disable-spmdization -mllvm -openmp-opt-disable-state-machine-rewrite -Ofast -c material.c -o material.o
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different data layouts: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is '' whereas 'material.c' is 'e-i64:64-i128:128-v16:16-v32:32-n16:32:64'
+ [-Wlinker-warnings]
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different target triples: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is 'nvptx64-nvidia-gpulibs' whereas 'material.c' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+warning: linking module '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc': Linking two modules of different target triples: '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc' is 'nvptx64' whereas 'material.c' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+3 warnings generated.
+clang -std=gnu99 -Wall -fopenmp -fopenmp-targets=nvptx64-nvidia-cuda -Xopenmp-target -march=sm_70 -Rpass=openmp-opt -Rpass-analysis=openmp-opt -mllvm -openmp-opt-disable-folding -mllvm -openmp-opt-disable-spmdization -mllvm -openmp-opt-disable-state-machine-rewrite -Ofast -c utils.c -o utils.o
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different data layouts: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is '' whereas 'utils.c' is 'e-i64:64-i128:128-v16:16-v32:32-n16:32:64'
+ [-Wlinker-warnings]
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different target triples: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is 'nvptx64-nvidia-gpulibs' whereas 'utils.c' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+warning: linking module '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc': Linking two modules of different target triples: '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc' is 'nvptx64' whereas 'utils.c' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+3 warnings generated.
+clang -std=gnu99 -Wall -fopenmp -fopenmp-targets=nvptx64-nvidia-cuda -Xopenmp-target -march=sm_70 -Rpass=openmp-opt -Rpass-analysis=openmp-opt -mllvm -openmp-opt-disable-folding -mllvm -openmp-opt-disable-spmdization -mllvm -openmp-opt-disable-state-machine-rewrite -Ofast main.o simulation.o io.o init.o material.o utils.o -o rsbench -lm

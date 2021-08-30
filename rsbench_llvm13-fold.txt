@@ -1,0 +1,3 @@
+clang -std=gnu99 -Wall -fopenmp -fopenmp-targets=nvptx64-nvidia-cuda -Xopenmp-target -march=sm_70 -Rpass=openmp-opt -Rpass-analysis=openmp-opt -mllvm -openmp-opt-disable-heap-to-sh    ared -mllvm -openmp-opt-disable-heap-to-stack -mllvm -openmp-opt-disable-spmdization -mllvm -openmp-opt-disable-state-machine-rewrite -Ofast -c main.c -o main.o
+clang-14: error: no such file or directory: 'ared'
+make: *** [Makefile:100: main.o] Error 1
