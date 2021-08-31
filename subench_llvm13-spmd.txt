@@ -1,0 +1,57 @@
+clang++ -O3 -fopenmp -fopenmp-targets=nvptx64-nvidia-cuda -Xopenmp-target -march=sm_70 -Rpass=openmp-opt -Rpass-missed=openmp-opt -Rpass-analysis=openmp-opt -mllvm -openmp-opt-disable-heap-to-shared -mllvm -openmp-opt-disable-heap-to-stack -mllvm -openmp-opt-disable-folding -mllvm -openmp-opt-disable-state-machine-rewrite -DPRECISION=1 -DUSE_VERSION=0 -DUSE_OPENMP -DMILC_COMPLEX -o bench_f32_openmp.exe su3_nn_bench.cpp 
+su3_nn_bench.cpp:209:18: warning: passing 4-byte aligned argument to 16-byte aligned parameter 1 of 'make_lattice' may result in an unaligned pointer access [-Walign-mismatch]
+  make_lattice(a.data(), ldim, Complx{1.0,0.0});
+                 ^
+1 warning generated.
+su3_nn_bench.cpp:209:18: warning: passing 4-byte aligned argument to 16-byte aligned parameter 1 of 'make_lattice' may result in an unaligned pointer access [-Walign-mismatch]
+  make_lattice(a.data(), ldim, Complx{1.0,0.0});
+                 ^
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different data layouts: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is '' whereas 'su3_nn_bench.cpp' is 'e-i64:64-i128:128-v16:16-v32:32-n16:32:64'
+ [-Wlinker-warnings]
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different target triples: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is 'nvptx64-nvidia-gpulibs' whereas 'su3_nn_bench.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+warning: linking module '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc': Linking two modules of different target triples: '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc' is 'nvptx64' whereas 'su3_nn_bench.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+clang-14: /home/mcornelius/llvm13/llvm/lib/Transforms/IPO/OpenMPOpt.cpp:3134: {anonymous}::AAKernelInfoFunction::changeToSPMDMode(llvm::Attributor&)::<lambda(llvm::Instruction*, llvm::Instruction*)>: Assertion `UsrI->getParent() == RegionExitBB && "Expected escaping users in exit region"' failed.
+PLEASE submit a bug report to https://bugs.llvm.org/ and include the crash backtrace, preprocessed source, and associated run script.
+Stack dump:
+0.	Program arguments: /home/mcornelius/clang/bin/clang-14 -cc1 -triple nvptx64-nvidia-cuda -aux-triple x86_64-unknown-linux-gnu -S -disable-free -main-file-name su3_nn_bench.cpp -mrelocation-model pic -pic-level 2 -fhalf-no-semantic-interposition -mframe-pointer=all -fno-rounding-math -fno-verbose-asm -no-integrated-as -mlink-builtin-bitcode /soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc -target-feature +ptx64 -target-sdk-version=10.1 -mlink-builtin-bitcode /home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc -target-cpu sm_70 -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -fno-dwarf-directory-asm -resource-dir /home/mcornelius/clang/lib/clang/14.0.0 -internal-isystem /home/mcornelius/clang/lib/clang/14.0.0/include/openmp_wrappers -include __clang_openmp_device_functions.h -D PRECISION=1 -D USE_VERSION=0 -D USE_OPENMP -D MILC_COMPLEX -c-isystem /soft/compilers/cuda/cuda-10.1.243/include -internal-isystem /usr/lib64/gcc/x86_64-suse-linux/7/../../../../include/c++/7 -internal-isystem /usr/lib64/gcc/x86_64-suse-linux/7/../../../../include/c++/7/x86_64-suse-linux -internal-isystem /usr/lib64/gcc/x86_64-suse-linux/7/../../../../include/c++/7/backward -internal-isystem /usr/lib64/gcc/x86_64-suse-linux/7/../../../../include/c++/7 -internal-isystem /usr/lib64/gcc/x86_64-suse-linux/7/../../../../include/c++/7/x86_64-suse-linux -internal-isystem /usr/lib64/gcc/x86_64-suse-linux/7/../../../../include/c++/7/backward -internal-isystem /home/mcornelius/clang/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -internal-isystem /home/mcornelius/clang/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O3 -Rpass=openmp-opt -Rpass-missed=openmp-opt -Rpass-analysis=openmp-opt -fdeprecated-macro -fdebug-compilation-dir=/home/mcornelius/su3-builds/su3_bench13-spmd -ferror-limit 19 -fopenmp -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -vectorize-loops -vectorize-slp -mllvm -openmp-opt-disable-heap-to-shared -mllvm -openmp-opt-disable-heap-to-stack -mllvm -openmp-opt-disable-folding -mllvm -openmp-opt-disable-state-machine-rewrite -fopenmp-is-device -fopenmp-host-ir-file-path /tmp/su3_nn_bench-393269.bc -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o /tmp/su3_nn_bench-06ad3b.s -x c++ su3_nn_bench.cpp
+1.	<eof> parser at end of file
+2.	Optimizer
+ #0 0x00007f0ff7cb7d6f PrintStackTraceSignalHandler(void*) Signals.cpp:0:0
+ #1 0x00007f0ff7cb5689 SignalHandler(int) Signals.cpp:0:0
+ #2 0x00007f100203ef80 __restore_rt (/lib64/libpthread.so.0+0x13f80)
+ #3 0x00007f0ff6e2818b raise (/lib64/libc.so.6+0x3a18b)
+ #4 0x00007f0ff6e29585 abort (/lib64/libc.so.6+0x3b585)
+ #5 0x00007f0ff6e2085a __assert_fail_base (/lib64/libc.so.6+0x3285a)
+ #6 0x00007f0ff6e208d2 (/lib64/libc.so.6+0x328d2)
+ #7 0x00007f0ffcd30e20 (anonymous namespace)::AAKernelInfoFunction::changeToSPMDMode(llvm::Attributor&) OpenMPOpt.cpp:0:0
+ #8 0x00007f0ffcd32a8d (anonymous namespace)::AAKernelInfoFunction::manifest(llvm::Attributor&) OpenMPOpt.cpp:0:0
+ #9 0x00007f0ffcc13765 llvm::Attributor::manifestAttributes() (/home/mcornelius/clang/lib/libLLVMipo.so.14git+0xa3765)
+#10 0x00007f0ffcc201c8 llvm::Attributor::run() (/home/mcornelius/clang/lib/libLLVMipo.so.14git+0xb01c8)
+#11 0x00007f0ffcd5a489 (anonymous namespace)::OpenMPOpt::runAttributor(bool) (.part.1229) OpenMPOpt.cpp:0:0
+#12 0x00007f0ffcd5c53b (anonymous namespace)::OpenMPOpt::run(bool) OpenMPOpt.cpp:0:0
+#13 0x00007f0ffcd5d273 llvm::OpenMPOptPass::run(llvm::Module&, llvm::AnalysisManager<llvm::Module>&) (/home/mcornelius/clang/lib/libLLVMipo.so.14git+0x1ed273)
+#14 0x00007f0ff57e15ed llvm::detail::PassModel<llvm::Module, llvm::OpenMPOptPass, llvm::PreservedAnalyses, llvm::AnalysisManager<llvm::Module> >::run(llvm::Module&, llvm::AnalysisManager<llvm::Module>&) (/home/mcornelius/clang/lib/libLLVMPasses.so.14git+0x5a5ed)
+#15 0x00007f0ff8f631b2 llvm::PassManager<llvm::Module, llvm::AnalysisManager<llvm::Module> >::run(llvm::Module&, llvm::AnalysisManager<llvm::Module>&) (/home/mcornelius/clang/lib/libLLVMCore.so.14git+0x2601b2)
+#16 0x00007f0ffdf6cdd7 (anonymous namespace)::EmitAssemblyHelper::EmitAssemblyWithNewPassManager(clang::BackendAction, std::unique_ptr<llvm::raw_pwrite_stream, std::default_delete<llvm::raw_pwrite_stream> >) BackendUtil.cpp:0:0
+#17 0x00007f0ffdf71f3b clang::EmitBackendOutput(clang::DiagnosticsEngine&, clang::HeaderSearchOptions const&, clang::CodeGenOptions const&, clang::TargetOptions const&, clang::LangOptions const&, llvm::StringRef, llvm::Module*, clang::BackendAction, std::unique_ptr<llvm::raw_pwrite_stream, std::default_delete<llvm::raw_pwrite_stream> >) (/home/mcornelius/clang/lib/libclangCodeGen.so.14git+0xf0f3b)
+#18 0x00007f0ffe2bc2a8 clang::BackendConsumer::HandleTranslationUnit(clang::ASTContext&) (/home/mcornelius/clang/lib/libclangCodeGen.so.14git+0x43b2a8)
+#19 0x00007f0ff154fa79 clang::ParseAST(clang::Sema&, bool, bool) (/home/mcornelius/clang/lib/libclangParse.so.14git+0x35a79)
+#20 0x00007f0ffe2bafc0 clang::CodeGenAction::ExecuteAction() (/home/mcornelius/clang/lib/libclangCodeGen.so.14git+0x439fc0)
+#21 0x00007f0ffb3fca91 clang::FrontendAction::Execute() (/home/mcornelius/clang/lib/libclangFrontend.so.14git+0x122a91)
+#22 0x00007f0ffb38f9e2 clang::CompilerInstance::ExecuteAction(clang::FrontendAction&) (/home/mcornelius/clang/lib/libclangFrontend.so.14git+0xb59e2)
+#23 0x00007f1001e28dba clang::ExecuteCompilerInvocation(clang::CompilerInstance*) (/home/mcornelius/clang/lib/libclangFrontendTool.so.14git+0x4dba)
+#24 0x0000000000418734 cc1_main(llvm::ArrayRef<char const*>, char const*, void*) (/home/mcornelius/clang/bin/clang-14+0x418734)
+#25 0x0000000000413ba1 ExecuteCC1Tool(llvm::SmallVectorImpl<char const*>&) driver.cpp:0:0
+#26 0x0000000000410c15 main (/home/mcornelius/clang/bin/clang-14+0x410c15)
+#27 0x00007f0ff6e1334d __libc_start_main (/lib64/libc.so.6+0x2534d)
+#28 0x000000000041377a _start /home/abuild/rpmbuild/BUILD/glibc-2.31/csu/../sysdeps/x86_64/start.S:122:0
+clang-14: error: unable to execute command: Aborted
+clang-14: error: clang frontend command failed due to signal (use -v to see invocation)
+clang version 14.0.0
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /home/mcornelius/clang/bin
+clang-14: note: diagnostic msg: Error generating preprocessed source(s).
+make: *** [Makefile.openmp:55: bench_f32_openmp.exe] Error 254
