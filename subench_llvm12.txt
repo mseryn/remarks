@@ -1,0 +1,1 @@
+clang++ -O3 -fopenmp -fopenmp-targets=nvptx64-nvidia-cuda -Xopenmp-target -march=sm_70 -Rpass=openmp-opt -Rpass-missed=openmp-opt -Rpass-analysis=openmp-opt -DPRECISION=1 -DUSE_VERSION=0 -DUSE_OPENMP -DMILC_COMPLEX -o bench_f32_openmp.exe su3_nn_bench.cpp 

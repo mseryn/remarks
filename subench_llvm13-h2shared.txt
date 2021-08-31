@@ -1,0 +1,37 @@
+clang++ -O3 -fopenmp -fopenmp-targets=nvptx64-nvidia-cuda -Xopenmp-target -march=sm_70 -Rpass=openmp-opt -Rpass-missed=openmp-opt -Rpass-analysis=openmp-opt -mllvm -openmp-opt-disable-heap-to-stack -mllvm -openmp-opt-disable-folding -mllvm -openmp-opt-disable-spmdization -mllvm -openmp-opt-disable-state-machine-rewrite -DPRECISION=1 -DUSE_VERSION=0 -DUSE_OPENMP -DMILC_COMPLEX -o bench_f32_openmp.exe su3_nn_bench.cpp 
+su3_nn_bench.cpp:209:18: warning: passing 4-byte aligned argument to 16-byte aligned parameter 1 of 'make_lattice' may result in an unaligned pointer access [-Walign-mismatch]
+  make_lattice(a.data(), ldim, Complx{1.0,0.0});
+                 ^
+1 warning generated.
+su3_nn_bench.cpp:209:18: warning: passing 4-byte aligned argument to 16-byte aligned parameter 1 of 'make_lattice' may result in an unaligned pointer access [-Walign-mismatch]
+  make_lattice(a.data(), ldim, Complx{1.0,0.0});
+                 ^
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different data layouts: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is '' whereas 'su3_nn_bench.cpp' is 'e-i64:64-i128:128-v16:16-v32:32-n16:32:64'
+ [-Wlinker-warnings]
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different target triples: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is 'nvptx64-nvidia-gpulibs' whereas 'su3_nn_bench.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+warning: linking module '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc': Linking two modules of different target triples: '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc' is 'nvptx64' whereas 'su3_nn_bench.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+In file included from su3_nn_bench.cpp:126:
+./mat_nn_openmp.hpp:59:5: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    #pragma omp target teams distribute num_teams(num_teams) thread_limit(threads_per_team)
+    ^
+./mat_nn_openmp.hpp:59:5: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+./mat_nn_openmp.hpp:59:5: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+./mat_nn_openmp.hpp:60:31: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    for(int i=0;i<total_sites;++i) {
+                              ^
+./mat_nn_openmp.hpp:60:31: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+./mat_nn_openmp.hpp:30:9: remark: Replaced globalized variable with 8 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+  site *d_a, *d_c;
+        ^
+./mat_nn_openmp.hpp:60:13: remark: Replaced globalized variable with 4 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+    for(int i=0;i<total_sites;++i) {
+            ^
+./mat_nn_openmp.hpp:31:15: remark: Replaced globalized variable with 8 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+  su3_matrix *d_b;
+              ^
+./mat_nn_openmp.hpp:30:15: remark: Replaced globalized variable with 8 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+  site *d_a, *d_c;
+              ^
+4 warnings generated.
