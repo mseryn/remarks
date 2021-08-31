@@ -1,0 +1,663 @@
+[  6%] Building CXX object src/Platforms/OMPTarget/CMakeFiles/platform_omptarget.dir/OMPallocator.cpp.o
+[  6%] Building CXX object src/Platforms/OMPTarget/CMakeFiles/platform_omptarget.dir/assignDevice.cpp.o
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different data layouts: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is '' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Platforms/OMPTarget/OMPallocator.cpp' is 'e-i64:64-i128:128-v16:16-v32:32-n16:32:64'
+ [-Wlinker-warnings]
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different target triples: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is 'nvptx64-nvidia-gpulibs' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Platforms/OMPTarget/OMPallocator.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+warning: linking module '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc': Linking two modules of different target triples: '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc' is 'nvptx64' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Platforms/OMPTarget/OMPallocator.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+3 warnings generated.
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different data layouts: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is '' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Platforms/OMPTarget/assignDevice.cpp' is 'e-i64:64-i128:128-v16:16-v32:32-n16:32:64'
+ [-Wlinker-warnings]
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different target triples: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is 'nvptx64-nvidia-gpulibs' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Platforms/OMPTarget/assignDevice.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+warning: linking module '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc': Linking two modules of different target triples: '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc' is 'nvptx64' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Platforms/OMPTarget/assignDevice.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+3 warnings generated.
+[ 10%] Linking CXX static library ../../../lib/libplatform_omptarget.a
+[ 10%] Built target platform_omptarget
+[ 16%] Building CXX object src/Platforms/CMakeFiles/platform_device.dir/MemoryUsage.cpp.o
+[ 16%] Building CXX object src/Platforms/CMakeFiles/platform_device.dir/Host/sysutil.cpp.o
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different data layouts: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is '' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Platforms/Host/sysutil.cpp' is 'e-i64:64-i128:128-v16:16-v32:32-n16:32:64'
+ [-Wlinker-warnings]
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different target triples: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is 'nvptx64-nvidia-gpulibs' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Platforms/Host/sysutil.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+warning: linking module '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc': Linking two modules of different target triples: '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc' is 'nvptx64' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Platforms/Host/sysutil.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+3 warnings generated.
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different data layouts: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is '' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Platforms/MemoryUsage.cpp' is 'e-i64:64-i128:128-v16:16-v32:32-n16:32:64'
+ [-Wlinker-warnings]
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different target triples: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is 'nvptx64-nvidia-gpulibs' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Platforms/MemoryUsage.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+warning: linking module '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc': Linking two modules of different target triples: '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc' is 'nvptx64' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Platforms/MemoryUsage.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+3 warnings generated.
+[ 20%] Linking CXX static library ../../lib/libplatform_device.a
+[ 20%] Built target platform_device
+[ 23%] Generating git-rev-tmp.h
+[ 30%] Building CXX object src/CMakeFiles/qmcutil.dir/Utilities/SpeciesSet.cpp.o
+[ 43%] Building CXX object src/CMakeFiles/qmcutil.dir/Utilities/tinyxml/tinyxml2.cpp.o
+[ 46%] Building CXX object src/CMakeFiles/qmcutil.dir/Utilities/Communicate.cpp.o
+[ 46%] Building CXX object src/CMakeFiles/qmcutil.dir/Utilities/InfoStream.cpp.o
+[ 50%] Building CXX object src/CMakeFiles/qmcutil.dir/Utilities/XMLWriter.cpp.o
+[ 50%] Building CXX object src/CMakeFiles/qmcutil.dir/Utilities/NewTimer.cpp.o
+[ 50%] Building CXX object src/CMakeFiles/qmcutil.dir/Utilities/OutputManager.cpp.o
+[ 50%] Building CXX object src/CMakeFiles/qmcutil.dir/Utilities/qmcpack_version.cpp.o
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different data layouts: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is '' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Utilities/tinyxml/tinyxml2.cpp' is 'e-i64:64-i128:128-v16:16-v32:32-n16:32:64'
+ [-Wlinker-warnings]
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different target triples: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is 'nvptx64-nvidia-gpulibs' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Utilities/tinyxml/tinyxml2.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+warning: linking module '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc': Linking two modules of different target triples: '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc' is 'nvptx64' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Utilities/tinyxml/tinyxml2.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+3 warnings generated.
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different data layouts: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is '' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Utilities/XMLWriter.cpp' is 'e-i64:64-i128:128-v16:16-v32:32-n16:32:64'
+ [-Wlinker-warnings]
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different target triples: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is 'nvptx64-nvidia-gpulibs' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Utilities/XMLWriter.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+warning: linking module '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc': Linking two modules of different target triples: '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc' is 'nvptx64' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Utilities/XMLWriter.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+3 warnings generated.
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different data layouts: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is '' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Utilities/SpeciesSet.cpp' is 'e-i64:64-i128:128-v16:16-v32:32-n16:32:64'
+ [-Wlinker-warnings]
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different target triples: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is 'nvptx64-nvidia-gpulibs' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Utilities/SpeciesSet.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+warning: linking module '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc': Linking two modules of different target triples: '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc' is 'nvptx64' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Utilities/SpeciesSet.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+3 warnings generated.
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different data layouts: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is '' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Utilities/OutputManager.cpp' is 'e-i64:64-i128:128-v16:16-v32:32-n16:32:64'
+ [-Wlinker-warnings]
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different target triples: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is 'nvptx64-nvidia-gpulibs' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Utilities/OutputManager.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+warning: linking module '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc': Linking two modules of different target triples: '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc' is 'nvptx64' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Utilities/OutputManager.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+3 warnings generated.
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different data layouts: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is '' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Utilities/qmcpack_version.cpp' is 'e-i64:64-i128:128-v16:16-v32:32-n16:32:64'
+ [-Wlinker-warnings]
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different target triples: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is 'nvptx64-nvidia-gpulibs' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Utilities/qmcpack_version.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different data layouts: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is '' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Utilities/InfoStream.cpp' is 'e-i64:64-i128:128-v16:16-v32:32-n16:32:64'
+ [-Wlinker-warnings]
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different target triples: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is 'nvptx64-nvidia-gpulibs' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Utilities/InfoStream.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+warning: linking module '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc': Linking two modules of different target triples: '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc' is 'nvptx64' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Utilities/qmcpack_version.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+warning: linking module '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc': Linking two modules of different target triples: '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc' is 'nvptx64' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Utilities/InfoStream.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+3 warnings generated.
+3 warnings generated.
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different data layouts: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is '' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Utilities/Communicate.cpp' is 'e-i64:64-i128:128-v16:16-v32:32-n16:32:64'
+ [-Wlinker-warnings]
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different target triples: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is 'nvptx64-nvidia-gpulibs' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Utilities/Communicate.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+warning: linking module '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc': Linking two modules of different target triples: '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc' is 'nvptx64' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Utilities/Communicate.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+3 warnings generated.
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different data layouts: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is '' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Utilities/NewTimer.cpp' is 'e-i64:64-i128:128-v16:16-v32:32-n16:32:64'
+ [-Wlinker-warnings]
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different target triples: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is 'nvptx64-nvidia-gpulibs' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Utilities/NewTimer.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+warning: linking module '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc': Linking two modules of different target triples: '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc' is 'nvptx64' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Utilities/NewTimer.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+3 warnings generated.
+[ 53%] Linking CXX static library ../lib/libqmcutil.a
+[ 53%] Built target qmcutil
+[ 60%] Building CXX object src/CMakeFiles/qmcbase.dir/Particle/VirtualParticleSet.cpp.o
+[ 66%] Building CXX object src/CMakeFiles/qmcbase.dir/Particle/DistanceTableAA.cpp.o
+[ 66%] Building CXX object src/CMakeFiles/qmcbase.dir/Particle/ParticleSet.cpp.o
+[ 73%] Building CXX object src/CMakeFiles/qmcbase.dir/Particle/ParticleSet.BC.cpp.o
+[ 73%] Building CXX object src/CMakeFiles/qmcbase.dir/Particle/DistanceTableAB.cpp.o
+[ 73%] Building CXX object src/CMakeFiles/qmcbase.dir/Particle/ParticleSet_builder.cpp.o
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different data layouts: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is '' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Particle/ParticleSet.BC.cpp' is 'e-i64:64-i128:128-v16:16-v32:32-n16:32:64'
+ [-Wlinker-warnings]
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different target triples: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is 'nvptx64-nvidia-gpulibs' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Particle/ParticleSet.BC.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+warning: linking module '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc': Linking two modules of different target triples: '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc' is 'nvptx64' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Particle/ParticleSet.BC.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+3 warnings generated.
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different data layouts: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is '' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Particle/VirtualParticleSet.cpp' is 'e-i64:64-i128:128-v16:16-v32:32-n16:32:64'
+ [-Wlinker-warnings]
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different target triples: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is 'nvptx64-nvidia-gpulibs' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Particle/VirtualParticleSet.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+warning: linking module '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc': Linking two modules of different target triples: '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc' is 'nvptx64' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Particle/VirtualParticleSet.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different data layouts: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is '' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Particle/DistanceTableAB.cpp' is 'e-i64:64-i128:128-v16:16-v32:32-n16:32:64'
+ [-Wlinker-warnings]
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different target triples: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is 'nvptx64-nvidia-gpulibs' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Particle/DistanceTableAB.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+warning: linking module '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc': Linking two modules of different target triples: '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc' is 'nvptx64' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Particle/DistanceTableAB.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+3 warnings generated.
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different data layouts: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is '' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Particle/DistanceTableAA.cpp' is 'e-i64:64-i128:128-v16:16-v32:32-n16:32:64'
+ [-Wlinker-warnings]
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different target triples: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is 'nvptx64-nvidia-gpulibs' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Particle/DistanceTableAA.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+warning: linking module '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc': Linking two modules of different target triples: '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc' is 'nvptx64' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Particle/DistanceTableAA.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+3 warnings generated.
+3 warnings generated.
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different data layouts: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is '' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Particle/ParticleSet_builder.cpp' is 'e-i64:64-i128:128-v16:16-v32:32-n16:32:64'
+ [-Wlinker-warnings]
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different target triples: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is 'nvptx64-nvidia-gpulibs' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Particle/ParticleSet_builder.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+warning: linking module '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc': Linking two modules of different target triples: '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc' is 'nvptx64' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Particle/ParticleSet_builder.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+3 warnings generated.
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different data layouts: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is '' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Particle/ParticleSet.cpp' is 'e-i64:64-i128:128-v16:16-v32:32-n16:32:64'
+ [-Wlinker-warnings]
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different target triples: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is 'nvptx64-nvidia-gpulibs' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Particle/ParticleSet.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+warning: linking module '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc': Linking two modules of different target triples: '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc' is 'nvptx64' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Particle/ParticleSet.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+3 warnings generated.
+[ 76%] Linking CXX static library ../lib/libqmcbase.a
+[ 76%] Built target qmcbase
+[ 83%] Building CXX object src/QMCWaveFunctions/CMakeFiles/qmcwfs.dir/einspline_spo_omp.cpp.o
+[ 93%] Building CXX object src/QMCWaveFunctions/CMakeFiles/qmcwfs.dir/DiracDeterminant.cpp.o
+[ 93%] Building CXX object src/QMCWaveFunctions/CMakeFiles/qmcwfs.dir/WaveFunction.cpp.o
+[ 93%] Building CXX object src/QMCWaveFunctions/CMakeFiles/qmcwfs.dir/SPOSet_builder.cpp.o
+[ 93%] Building CXX object src/QMCWaveFunctions/CMakeFiles/qmcwfs.dir/DiracDeterminantRef.cpp.o
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different data layouts: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is '' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/DiracDeterminantRef.cpp' is 'e-i64:64-i128:128-v16:16-v32:32-n16:32:64'
+ [-Wlinker-warnings]
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different target triples: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is 'nvptx64-nvidia-gpulibs' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/DiracDeterminantRef.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+warning: linking module '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc': Linking two modules of different target triples: '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc' is 'nvptx64' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/DiracDeterminantRef.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different data layouts: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is '' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/DiracDeterminant.cpp' is 'e-i64:64-i128:128-v16:16-v32:32-n16:32:64'
+ [-Wlinker-warnings]
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different target triples: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is 'nvptx64-nvidia-gpulibs' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/DiracDeterminant.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+warning: linking module '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc': Linking two modules of different target triples: '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc' is 'nvptx64' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/DiracDeterminant.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+3 warnings generated.
+3 warnings generated.
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different data layouts: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is '' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp' is 'e-i64:64-i128:128-v16:16-v32:32-n16:32:64'
+ [-Wlinker-warnings]
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different target triples: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is 'nvptx64-nvidia-gpulibs' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+warning: linking module '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc': Linking two modules of different target triples: '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc' is 'nvptx64' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different data layouts: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is '' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/SPOSet_builder.cpp' is 'e-i64:64-i128:128-v16:16-v32:32-n16:32:64'
+ [-Wlinker-warnings]
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different target triples: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is 'nvptx64-nvidia-gpulibs' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/SPOSet_builder.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+warning: linking module '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc': Linking two modules of different target triples: '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc' is 'nvptx64' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/SPOSet_builder.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+3 warnings generated.
+In file included from /home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:18:
+In file included from /home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBspline.hpp:27:
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineEvalHelper.hpp:49:9: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    ind = 0;
+        ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineEvalHelper.hpp:50:9: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    dx  = T(0);
+        ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineEvalHelper.hpp:54:9: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    ind = static_cast<int>(x);
+        ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineEvalHelper.hpp:55:8: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    dx = x - ind;
+       ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineEvalHelper.hpp:59:11: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+      ind = nmax;
+          ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineEvalHelper.hpp:60:11: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+      dx  = T(1) - std::numeric_limits<T>::epsilon();
+          ^
+In file included from /home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:18:
+In file included from /home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBspline.hpp:26:
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineData.hpp:68:12: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    a[0]   = ((A00 * tx + A01) * tx + A02) * tx + A03;
+           ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineData.hpp:69:12: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    a[1]   = ((A10 * tx + A11) * tx + A12) * tx + A13;
+           ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineData.hpp:70:12: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    a[2]   = ((A20 * tx + A21) * tx + A22) * tx + A23;
+           ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineData.hpp:71:12: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    a[3]   = ((A30 * tx + A31) * tx + A32) * tx + A33;
+           ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineData.hpp:72:12: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    da[0]  = (dA01 * tx + dA02) * tx + dA03;
+           ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineData.hpp:73:12: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    da[1]  = (dA11 * tx + dA12) * tx + dA13;
+           ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineData.hpp:74:12: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    da[2]  = (dA21 * tx + dA22) * tx + dA23;
+           ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineData.hpp:75:12: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    da[3]  = (dA31 * tx + dA32) * tx + dA33;
+           ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineData.hpp:76:12: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    d2a[0] = d2A02 * tx + d2A03;
+           ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineData.hpp:77:12: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    d2a[1] = d2A12 * tx + d2A13;
+           ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineData.hpp:78:12: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    d2a[2] = d2A22 * tx + d2A23;
+           ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineData.hpp:79:12: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    d2a[3] = d2A32 * tx + d2A33;
+           ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:312:5: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    #pragma omp target teams distribute num_teams(NumTeams) thread_limit(ChunkSizePerTeam) \
+    ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:312:5: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:312:5: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:319:17: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+      const int first = ChunkSizePerTeam * team_id;
+                ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:320:17: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+      const int last =
+                ^
+In file included from /home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:18:
+In file included from /home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBspline.hpp:27:
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineEvalHelper.hpp:49:9: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    ind = 0;
+        ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineEvalHelper.hpp:50:9: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    dx  = T(0);
+        ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineEvalHelper.hpp:54:9: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    ind = static_cast<int>(x);
+        ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineEvalHelper.hpp:55:8: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    dx = x - ind;
+       ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineEvalHelper.hpp:59:11: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+      ind = nmax;
+          ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineEvalHelper.hpp:60:11: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+      dx  = T(1) - std::numeric_limits<T>::epsilon();
+          ^
+In file included from /home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:18:
+In file included from /home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBspline.hpp:26:
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineData.hpp:54:10: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    a[0] = ((A00 * tx + A01) * tx + A02) * tx + A03;
+         ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineData.hpp:55:10: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    a[1] = ((A10 * tx + A11) * tx + A12) * tx + A13;
+         ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineData.hpp:56:10: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    a[2] = ((A20 * tx + A21) * tx + A22) * tx + A23;
+         ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineData.hpp:57:10: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    a[3] = ((A30 * tx + A31) * tx + A32) * tx + A33;
+         ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:160:5: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    #pragma omp target teams distribute num_teams(NumTeams) thread_limit(ChunkSizePerTeam) \
+    ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:160:5: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:167:17: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+      const int first = ChunkSizePerTeam * team_id;
+                ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:168:17: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+      const int last =
+                ^
+In file included from /home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:18:
+In file included from /home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBspline.hpp:27:
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineEvalHelper.hpp:49:9: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    ind = 0;
+        ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineEvalHelper.hpp:50:9: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    dx  = T(0);
+        ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineEvalHelper.hpp:54:9: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    ind = static_cast<int>(x);
+        ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineEvalHelper.hpp:55:8: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    dx = x - ind;
+       ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineEvalHelper.hpp:59:11: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+      ind = nmax;
+          ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineEvalHelper.hpp:60:11: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+      dx  = T(1) - std::numeric_limits<T>::epsilon();
+          ^
+In file included from /home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:18:
+In file included from /home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBspline.hpp:26:
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineData.hpp:54:10: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    a[0] = ((A00 * tx + A01) * tx + A02) * tx + A03;
+         ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineData.hpp:55:10: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    a[1] = ((A10 * tx + A11) * tx + A12) * tx + A13;
+         ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineData.hpp:56:10: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    a[2] = ((A20 * tx + A21) * tx + A22) * tx + A23;
+         ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineData.hpp:57:10: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    a[3] = ((A30 * tx + A31) * tx + A32) * tx + A33;
+         ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:266:54: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+        ratios_private_ptr[iVP * NumTeams + team_id] = sum;
+                                                     ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:240:5: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    #pragma omp target teams distribute collapse(2) num_teams(nVP* NumTeams) thread_limit(ChunkSizePerTeam) \
+    ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:240:5: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:240:5: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:240:5: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:249:19: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+        const int first = ChunkSizePerTeam * team_id;
+                  ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:250:19: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+        const int last =
+                  ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:252:24: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+        auto* restrict offload_scratch_iVP_ptr = offload_scratch_ptr + padded_size * iVP;
+                       ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:262:11: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+        T sum(0);
+          ^
+In file included from /home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:18:
+In file included from /home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBspline.hpp:27:
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineEvalHelper.hpp:49:9: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    ind = 0;
+        ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineEvalHelper.hpp:50:9: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    dx  = T(0);
+        ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineEvalHelper.hpp:54:9: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    ind = static_cast<int>(x);
+        ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineEvalHelper.hpp:55:8: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    dx = x - ind;
+       ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineEvalHelper.hpp:59:11: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+      ind = nmax;
+          ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineEvalHelper.hpp:60:11: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+      dx  = T(1) - std::numeric_limits<T>::epsilon();
+          ^
+In file included from /home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:18:
+In file included from /home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBspline.hpp:26:
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineData.hpp:68:12: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    a[0]   = ((A00 * tx + A01) * tx + A02) * tx + A03;
+           ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineData.hpp:69:12: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    a[1]   = ((A10 * tx + A11) * tx + A12) * tx + A13;
+           ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineData.hpp:70:12: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    a[2]   = ((A20 * tx + A21) * tx + A22) * tx + A23;
+           ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineData.hpp:71:12: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    a[3]   = ((A30 * tx + A31) * tx + A32) * tx + A33;
+           ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineData.hpp:72:12: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    da[0]  = (dA01 * tx + dA02) * tx + dA03;
+           ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineData.hpp:73:12: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    da[1]  = (dA11 * tx + dA12) * tx + dA13;
+           ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineData.hpp:74:12: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    da[2]  = (dA21 * tx + dA22) * tx + dA23;
+           ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineData.hpp:75:12: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    da[3]  = (dA31 * tx + dA32) * tx + dA33;
+           ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineData.hpp:76:12: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    d2a[0] = d2A02 * tx + d2A03;
+           ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineData.hpp:77:12: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    d2a[1] = d2A12 * tx + d2A13;
+           ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineData.hpp:78:12: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    d2a[2] = d2A22 * tx + d2A23;
+           ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineData.hpp:79:12: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    d2a[3] = d2A32 * tx + d2A33;
+           ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:407:5: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    #pragma omp target teams distribute collapse(2) num_teams(nw* NumTeams) thread_limit(ChunkSizePerTeam) \
+    ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:407:5: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:407:5: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:413:34: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+    for (size_t iw = 0; iw < nw; iw++)
+                                 ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:413:34: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:416:19: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+        const int first = ChunkSizePerTeam * team_id;
+                  ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:417:19: remark: Value has potential side effects preventing SPMD-mode execution. [OMP121] [-Rpass-analysis=openmp-opt]
+        const int last =
+                  ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:172:21: remark: Replaced globalized variable with 32 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+      T a[4], b[4], c[4];
+                    ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:157:20: remark: Replaced globalized variable with 8 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+    auto* restrict psi_ptr        = offload_scratch[i].data();
+                   ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:156:26: remark: Replaced globalized variable with 8 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+    const auto* restrict spline_m = einsplines[i];
+                         ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:171:19: remark: Replaced globalized variable with 4 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+      int ix, iy, iz;
+                  ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:172:9: remark: Replaced globalized variable with 32 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+      T a[4], b[4], c[4];
+        ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:171:11: remark: Replaced globalized variable with 4 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+      int ix, iy, iz;
+          ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:168:17: remark: Replaced globalized variable with 4 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+      const int last =
+                ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:171:15: remark: Replaced globalized variable with 4 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+      int ix, iy, iz;
+              ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:172:15: remark: Replaced globalized variable with 32 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+      T a[4], b[4], c[4];
+              ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:167:17: remark: Replaced globalized variable with 4 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+      const int first = ChunkSizePerTeam * team_id;
+                ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:224:12: remark: Replaced globalized variable with 4 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+  for (int i = 0; i < nBlocks; ++i)
+           ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:249:19: remark: Replaced globalized variable with 4 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+        const int first = ChunkSizePerTeam * team_id;
+                  ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:256:23: remark: Replaced globalized variable with 32 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+        T a[4], b[4], c[4];
+                      ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:262:11: remark: Replaced globalized variable with 8 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+        T sum(0);
+          ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:220:8: remark: Replaced globalized variable with 4 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+  auto nSplinesPerBlock_local = nSplinesPerBlock;
+       ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:255:17: remark: Replaced globalized variable with 4 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+        int ix, iy, iz;
+                ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:252:24: remark: Replaced globalized variable with 8 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+        auto* restrict offload_scratch_iVP_ptr = offload_scratch_ptr + padded_size * iVP;
+                       ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:256:17: remark: Replaced globalized variable with 32 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+        T a[4], b[4], c[4];
+                ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:236:20: remark: Replaced globalized variable with 8 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+    auto* restrict psiinv_ptr          = psiinv_pos_copy.data();
+                   ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:226:26: remark: Replaced globalized variable with 8 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+    const auto* restrict spline_m = einsplines[i];
+                         ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:255:13: remark: Replaced globalized variable with 4 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+        int ix, iy, iz;
+            ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:255:21: remark: Replaced globalized variable with 4 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+        int ix, iy, iz;
+                    ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:256:11: remark: Replaced globalized variable with 32 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+        T a[4], b[4], c[4];
+          ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:250:19: remark: Replaced globalized variable with 4 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+        const int last =
+                  ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:307:26: remark: Replaced globalized variable with 8 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+    const auto* restrict spline_m      = einsplines[i];
+                         ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:324:56: remark: Replaced globalized variable with 32 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+      T a[4], b[4], c[4], da[4], db[4], dc[4], d2a[4], d2b[4], d2c[4];
+                                                       ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:324:64: remark: Replaced globalized variable with 32 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+      T a[4], b[4], c[4], da[4], db[4], dc[4], d2a[4], d2b[4], d2c[4];
+                                                               ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:324:15: remark: Replaced globalized variable with 32 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+      T a[4], b[4], c[4], da[4], db[4], dc[4], d2a[4], d2b[4], d2c[4];
+              ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:309:9: remark: Replaced globalized variable with 4 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+    int padded_size                    = getAlignedSize<T>(nSplinesPerBlock);
+        ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:324:27: remark: Replaced globalized variable with 32 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+      T a[4], b[4], c[4], da[4], db[4], dc[4], d2a[4], d2b[4], d2c[4];
+                          ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:324:48: remark: Replaced globalized variable with 32 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+      T a[4], b[4], c[4], da[4], db[4], dc[4], d2a[4], d2b[4], d2c[4];
+                                               ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:323:11: remark: Replaced globalized variable with 4 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+      int ix, iy, iz;
+          ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:323:15: remark: Replaced globalized variable with 4 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+      int ix, iy, iz;
+              ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:324:41: remark: Replaced globalized variable with 32 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+      T a[4], b[4], c[4], da[4], db[4], dc[4], d2a[4], d2b[4], d2c[4];
+                                        ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:323:19: remark: Replaced globalized variable with 4 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+      int ix, iy, iz;
+                  ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:324:21: remark: Replaced globalized variable with 32 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+      T a[4], b[4], c[4], da[4], db[4], dc[4], d2a[4], d2b[4], d2c[4];
+                    ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:324:34: remark: Replaced globalized variable with 32 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+      T a[4], b[4], c[4], da[4], db[4], dc[4], d2a[4], d2b[4], d2c[4];
+                                 ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:324:9: remark: Replaced globalized variable with 32 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+      T a[4], b[4], c[4], da[4], db[4], dc[4], d2a[4], d2b[4], d2c[4];
+        ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:320:17: remark: Replaced globalized variable with 4 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+      const int last =
+                ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:319:17: remark: Replaced globalized variable with 4 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+      const int first = ChunkSizePerTeam * team_id;
+                ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:308:20: remark: Replaced globalized variable with 8 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+    auto* restrict offload_scratch_ptr = offload_scratch[i].data();
+                   ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:420:13: remark: Replaced globalized variable with 4 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+        int ix, iy, iz;
+            ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:421:58: remark: Replaced globalized variable with 32 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+        T a[4], b[4], c[4], da[4], db[4], dc[4], d2a[4], d2b[4], d2c[4];
+                                                         ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:421:29: remark: Replaced globalized variable with 32 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+        T a[4], b[4], c[4], da[4], db[4], dc[4], d2a[4], d2b[4], d2c[4];
+                            ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:404:11: remark: Replaced globalized variable with 8 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+    auto* multi_offload_scratch_ptr = multi_offload_scratch[i].data();
+          ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:421:23: remark: Replaced globalized variable with 32 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+        T a[4], b[4], c[4], da[4], db[4], dc[4], d2a[4], d2b[4], d2c[4];
+                      ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:421:11: remark: Replaced globalized variable with 32 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+        T a[4], b[4], c[4], da[4], db[4], dc[4], d2a[4], d2b[4], d2c[4];
+          ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:420:17: remark: Replaced globalized variable with 4 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+        int ix, iy, iz;
+                ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:421:17: remark: Replaced globalized variable with 32 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+        T a[4], b[4], c[4], da[4], db[4], dc[4], d2a[4], d2b[4], d2c[4];
+                ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:420:21: remark: Replaced globalized variable with 4 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+        int ix, iy, iz;
+                    ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:421:50: remark: Replaced globalized variable with 32 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+        T a[4], b[4], c[4], da[4], db[4], dc[4], d2a[4], d2b[4], d2c[4];
+                                                 ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:400:26: remark: Replaced globalized variable with 8 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+    const auto* restrict spline_m = einsplines[i];
+                         ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:401:9: remark: Replaced globalized variable with 4 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+    int padded_size               = getAlignedSize<T>(nSplinesPerBlock);
+        ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:421:43: remark: Replaced globalized variable with 32 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+        T a[4], b[4], c[4], da[4], db[4], dc[4], d2a[4], d2b[4], d2c[4];
+                                          ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:421:66: remark: Replaced globalized variable with 32 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+        T a[4], b[4], c[4], da[4], db[4], dc[4], d2a[4], d2b[4], d2c[4];
+                                                                 ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:416:19: remark: Replaced globalized variable with 4 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+        const int first = ChunkSizePerTeam * team_id;
+                  ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:417:19: remark: Replaced globalized variable with 4 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+        const int last =
+                  ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:421:36: remark: Replaced globalized variable with 32 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+        T a[4], b[4], c[4], da[4], db[4], dc[4], d2a[4], d2b[4], d2c[4];
+                                   ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:413:17: remark: Replaced globalized variable with 8 bytes of shared memory. [OMP111] [-Rpass=openmp-opt]
+    for (size_t iw = 0; iw < nw; iw++)
+                ^
+In file included from /home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/einspline_spo_omp.cpp:18:
+In file included from /home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBspline.hpp:27:
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineEvalHelper.hpp:87:9: remark: Moving globalized variable to the stack. [OMP110] [-Rpass=openmp-opt]
+  T tx, ty, tz;
+        ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineEvalHelper.hpp:87:5: remark: Moving globalized variable to the stack. [OMP110] [-Rpass=openmp-opt]
+  T tx, ty, tz;
+    ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineEvalHelper.hpp:87:13: remark: Moving globalized variable to the stack. [OMP110] [-Rpass=openmp-opt]
+  T tx, ty, tz;
+            ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineEvalHelper.hpp:112:5: remark: Moving globalized variable to the stack. [OMP110] [-Rpass=openmp-opt]
+  T tx, ty, tz;
+    ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineEvalHelper.hpp:112:13: remark: Moving globalized variable to the stack. [OMP110] [-Rpass=openmp-opt]
+  T tx, ty, tz;
+            ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Numerics/Spline2/MultiBsplineEvalHelper.hpp:112:9: remark: Moving globalized variable to the stack. [OMP110] [-Rpass=openmp-opt]
+  T tx, ty, tz;
+        ^
+3 warnings generated.
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different data layouts: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is '' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/WaveFunction.cpp' is 'e-i64:64-i128:128-v16:16-v32:32-n16:32:64'
+ [-Wlinker-warnings]
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different target triples: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is 'nvptx64-nvidia-gpulibs' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/WaveFunction.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+warning: linking module '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc': Linking two modules of different target triples: '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc' is 'nvptx64' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/QMCWaveFunctions/WaveFunction.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+3 warnings generated.
+warning: src/QMCWaveFunctions/Jastrow/PolynomialFunctor3D.h:463:5: loop not vectorized: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+1 warning generated.
+[ 93%] Built target qmcwfs
+[ 96%] Building CXX object src/Drivers/CMakeFiles/check_spo_batched.dir/check_spo_batched.cpp.o
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Drivers/check_spo_batched.cpp:90:7: warning: variable 'iseed' set but not used [-Wunused-but-set-variable]
+  int iseed   = 11;
+      ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Drivers/check_spo_batched.cpp:261:10: warning: variable 'ratio' set but not used [-Wunused-but-set-variable]
+  double ratio         = 0.0;
+         ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Drivers/check_spo_batched.cpp:262:10: warning: variable 'nspheremoves' set but not used [-Wunused-but-set-variable]
+  double nspheremoves  = 0.0;
+         ^
+3 warnings generated.
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Drivers/check_spo_batched.cpp:262:10: warning: variable 'nspheremoves' set but not used [-Wunused-but-set-variable]
+  double nspheremoves  = 0.0;
+         ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Drivers/check_spo_batched.cpp:90:7: warning: variable 'iseed' set but not used [-Wunused-but-set-variable]
+  int iseed   = 11;
+      ^
+/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Drivers/check_spo_batched.cpp:261:10: warning: variable 'ratio' set but not used [-Wunused-but-set-variable]
+  double ratio         = 0.0;
+         ^
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different data layouts: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is '' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Drivers/check_spo_batched.cpp' is 'e-i64:64-i128:128-v16:16-v32:32-n16:32:64'
+ [-Wlinker-warnings]
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different target triples: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is 'nvptx64-nvidia-gpulibs' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Drivers/check_spo_batched.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+warning: linking module '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc': Linking two modules of different target triples: '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc' is 'nvptx64' whereas '/home/mcornelius/miniqmc-builds/miniqmc13-h2shared-h2stack/src/Drivers/check_spo_batched.cpp' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+6 warnings generated.
+[100%] Linking CXX executable ../../bin/check_spo_batched
+[100%] Built target check_spo_batched
