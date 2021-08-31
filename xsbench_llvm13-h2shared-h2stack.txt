@@ -1,0 +1,404 @@
+clang -v -Ofast -fopenmp -fopenmp-targets=nvptx64-nvidia-cuda -Xopenmp-target -march=sm_70 -mllvm -openmp-opt-disable-folding -mllvm -openmp-opt-disable-spmdization -mllvm -openmp-opt-disable-state-machine-rewrite -Rpass=openmp-opt -Rpass-analysis=openmp-opt -c Main.c -o Main.o
+clang version 14.0.0
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /home/mcornelius/clang/bin
+Found candidate GCC installation: /usr/lib64/gcc/x86_64-suse-linux/7
+Selected GCC installation: /usr/lib64/gcc/x86_64-suse-linux/7
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+Found CUDA installation: /soft/compilers/cuda/cuda-10.1.243, version 10.1
+ "/home/mcornelius/clang/bin/clang-14" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -emit-llvm-uselists -disable-free -main-file-name Main.c -mrelocation-model static -mframe-pointer=none -menable-no-infs -menable-no-nans -menable-unsafe-fp-math -fno-signed-zeros -mreassociate -freciprocal-math -fdenormal-fp-math=preserve-sign,preserve-sign -ffp-contract=fast -fno-rounding-math -ffast-math -ffinite-math-only -mconstructor-aliases -munwind-tables -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/mcornelius/XSBench-builds/XSBench13-h2shared-h2stack/openmp-offload -resource-dir /home/mcornelius/clang/lib/clang/14.0.0 -c-isystem /soft/compilers/cuda/cuda-10.1.243/include -internal-isystem /home/mcornelius/clang/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -internal-isystem /home/mcornelius/clang/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Ofast -Rpass=openmp-opt -Rpass-analysis=openmp-opt -fdebug-compilation-dir=/home/mcornelius/XSBench-builds/XSBench13-h2shared-h2stack/openmp-offload -ferror-limit 19 -fopenmp -fgnuc-version=4.2.1 -vectorize-loops -vectorize-slp -mllvm -openmp-opt-disable-folding -mllvm -openmp-opt-disable-spmdization -mllvm -openmp-opt-disable-state-machine-rewrite -disable-llvm-passes -fopenmp-targets=nvptx64-nvidia-cuda -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o /tmp/Main-128aef.bc -x c Main.c
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0git default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+ignoring nonexistent directory "/include"
+ignoring duplicate directory "/home/mcornelius/clang/lib/clang/14.0.0/include"
+ignoring duplicate directory "/usr/local/include"
+ignoring duplicate directory "/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include"
+ignoring duplicate directory "/usr/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /soft/compilers/cuda/cuda-10.1.243/include
+ /home/mcornelius/clang/lib/clang/14.0.0/include
+ /usr/local/include
+ /usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include
+ /usr/include
+End of search list.
+ "/home/mcornelius/clang/bin/clang-14" -cc1 -triple nvptx64-nvidia-cuda -aux-triple x86_64-unknown-linux-gnu -S -disable-free -main-file-name Main.c -mrelocation-model pic -pic-level 2 -fhalf-no-semantic-interposition -mframe-pointer=all -menable-no-infs -menable-no-nans -menable-unsafe-fp-math -fno-signed-zeros -mreassociate -freciprocal-math -ffp-contract=fast -fno-rounding-math -ffast-math -ffinite-math-only -fno-verbose-asm -no-integrated-as -mlink-builtin-bitcode /soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc -target-feature +ptx64 -target-sdk-version=10.1 -mlink-builtin-bitcode /home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc -target-cpu sm_70 -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -fno-dwarf-directory-asm -v -resource-dir /home/mcornelius/clang/lib/clang/14.0.0 -internal-isystem /home/mcornelius/clang/lib/clang/14.0.0/include/openmp_wrappers -include __clang_openmp_device_functions.h -c-isystem /soft/compilers/cuda/cuda-10.1.243/include -internal-isystem /home/mcornelius/clang/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -internal-isystem /home/mcornelius/clang/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Ofast -Rpass=openmp-opt -Rpass-analysis=openmp-opt -fdebug-compilation-dir=/home/mcornelius/XSBench-builds/XSBench13-h2shared-h2stack/openmp-offload -ferror-limit 19 -fopenmp -fgnuc-version=4.2.1 -vectorize-loops -vectorize-slp -mllvm -openmp-opt-disable-folding -mllvm -openmp-opt-disable-spmdization -mllvm -openmp-opt-disable-state-machine-rewrite -fopenmp-is-device -fopenmp-host-ir-file-path /tmp/Main-128aef.bc -o /tmp/Main-42d283.s -x c Main.c
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0git default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+ignoring nonexistent directory "/include"
+ignoring duplicate directory "/home/mcornelius/clang/lib/clang/14.0.0/include"
+ignoring duplicate directory "/usr/local/include"
+ignoring duplicate directory "/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include"
+ignoring duplicate directory "/usr/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /soft/compilers/cuda/cuda-10.1.243/include
+ /home/mcornelius/clang/lib/clang/14.0.0/include/openmp_wrappers
+ /home/mcornelius/clang/lib/clang/14.0.0/include
+ /usr/local/include
+ /usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include
+ /usr/include
+End of search list.
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different data layouts: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is '' whereas 'Main.c' is 'e-i64:64-i128:128-v16:16-v32:32-n16:32:64'
+ [-Wlinker-warnings]
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different target triples: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is 'nvptx64-nvidia-gpulibs' whereas 'Main.c' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+warning: linking module '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc': Linking two modules of different target triples: '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc' is 'nvptx64' whereas 'Main.c' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+3 warnings generated.
+ "/soft/compilers/cuda/cuda-10.1.243/bin/ptxas" -m64 -O3 -v --gpu-name sm_70 --output-file /tmp/Main-c5141e.cubin /tmp/Main-42d283.s -c
+ptxas info    : 0 bytes gmem
+ "/home/mcornelius/clang/bin/clang-14" -cc1 -triple x86_64-unknown-linux-gnu -emit-obj --mrelax-relocations -disable-free -main-file-name Main.c -mrelocation-model static -mframe-pointer=none -menable-no-infs -menable-no-nans -menable-unsafe-fp-math -fno-signed-zeros -mreassociate -freciprocal-math -fdenormal-fp-math=preserve-sign,preserve-sign -ffp-contract=fast -fno-rounding-math -ffast-math -ffinite-math-only -mconstructor-aliases -munwind-tables -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/mcornelius/XSBench-builds/XSBench13-h2shared-h2stack/openmp-offload -resource-dir /home/mcornelius/clang/lib/clang/14.0.0 -Ofast -Rpass=openmp-opt -Rpass-analysis=openmp-opt -fdebug-compilation-dir=/home/mcornelius/XSBench-builds/XSBench13-h2shared-h2stack/openmp-offload -ferror-limit 19 -fopenmp -fgnuc-version=4.2.1 -vectorize-loops -vectorize-slp -mllvm -openmp-opt-disable-folding -mllvm -openmp-opt-disable-spmdization -mllvm -openmp-opt-disable-state-machine-rewrite -fopenmp-targets=nvptx64-nvidia-cuda -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o /tmp/Main-45e249.o -x ir /tmp/Main-128aef.bc
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0git default target x86_64-unknown-linux-gnu
+ "/home/mcornelius/clang/bin/clang-offload-bundler" -type=o -targets=openmp-nvptx64-nvidia-cuda,host-x86_64-unknown-linux-gnu -outputs=Main.o -inputs=/tmp/Main-c5141e.cubin,/tmp/Main-45e249.o
+clang -v -Ofast -fopenmp -fopenmp-targets=nvptx64-nvidia-cuda -Xopenmp-target -march=sm_70 -mllvm -openmp-opt-disable-folding -mllvm -openmp-opt-disable-spmdization -mllvm -openmp-opt-disable-state-machine-rewrite -Rpass=openmp-opt -Rpass-analysis=openmp-opt -c io.c -o io.o
+clang version 14.0.0
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /home/mcornelius/clang/bin
+Found candidate GCC installation: /usr/lib64/gcc/x86_64-suse-linux/7
+Selected GCC installation: /usr/lib64/gcc/x86_64-suse-linux/7
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+Found CUDA installation: /soft/compilers/cuda/cuda-10.1.243, version 10.1
+ "/home/mcornelius/clang/bin/clang-14" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -emit-llvm-uselists -disable-free -main-file-name io.c -mrelocation-model static -mframe-pointer=none -menable-no-infs -menable-no-nans -menable-unsafe-fp-math -fno-signed-zeros -mreassociate -freciprocal-math -fdenormal-fp-math=preserve-sign,preserve-sign -ffp-contract=fast -fno-rounding-math -ffast-math -ffinite-math-only -mconstructor-aliases -munwind-tables -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/mcornelius/XSBench-builds/XSBench13-h2shared-h2stack/openmp-offload -resource-dir /home/mcornelius/clang/lib/clang/14.0.0 -c-isystem /soft/compilers/cuda/cuda-10.1.243/include -internal-isystem /home/mcornelius/clang/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -internal-isystem /home/mcornelius/clang/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Ofast -Rpass=openmp-opt -Rpass-analysis=openmp-opt -fdebug-compilation-dir=/home/mcornelius/XSBench-builds/XSBench13-h2shared-h2stack/openmp-offload -ferror-limit 19 -fopenmp -fgnuc-version=4.2.1 -vectorize-loops -vectorize-slp -mllvm -openmp-opt-disable-folding -mllvm -openmp-opt-disable-spmdization -mllvm -openmp-opt-disable-state-machine-rewrite -disable-llvm-passes -fopenmp-targets=nvptx64-nvidia-cuda -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o /tmp/io-5470cf.bc -x c io.c
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0git default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+ignoring nonexistent directory "/include"
+ignoring duplicate directory "/home/mcornelius/clang/lib/clang/14.0.0/include"
+ignoring duplicate directory "/usr/local/include"
+ignoring duplicate directory "/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include"
+ignoring duplicate directory "/usr/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /soft/compilers/cuda/cuda-10.1.243/include
+ /home/mcornelius/clang/lib/clang/14.0.0/include
+ /usr/local/include
+ /usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include
+ /usr/include
+End of search list.
+ "/home/mcornelius/clang/bin/clang-14" -cc1 -triple nvptx64-nvidia-cuda -aux-triple x86_64-unknown-linux-gnu -S -disable-free -main-file-name io.c -mrelocation-model pic -pic-level 2 -fhalf-no-semantic-interposition -mframe-pointer=all -menable-no-infs -menable-no-nans -menable-unsafe-fp-math -fno-signed-zeros -mreassociate -freciprocal-math -ffp-contract=fast -fno-rounding-math -ffast-math -ffinite-math-only -fno-verbose-asm -no-integrated-as -mlink-builtin-bitcode /soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc -target-feature +ptx64 -target-sdk-version=10.1 -mlink-builtin-bitcode /home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc -target-cpu sm_70 -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -fno-dwarf-directory-asm -v -resource-dir /home/mcornelius/clang/lib/clang/14.0.0 -internal-isystem /home/mcornelius/clang/lib/clang/14.0.0/include/openmp_wrappers -include __clang_openmp_device_functions.h -c-isystem /soft/compilers/cuda/cuda-10.1.243/include -internal-isystem /home/mcornelius/clang/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -internal-isystem /home/mcornelius/clang/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Ofast -Rpass=openmp-opt -Rpass-analysis=openmp-opt -fdebug-compilation-dir=/home/mcornelius/XSBench-builds/XSBench13-h2shared-h2stack/openmp-offload -ferror-limit 19 -fopenmp -fgnuc-version=4.2.1 -vectorize-loops -vectorize-slp -mllvm -openmp-opt-disable-folding -mllvm -openmp-opt-disable-spmdization -mllvm -openmp-opt-disable-state-machine-rewrite -fopenmp-is-device -fopenmp-host-ir-file-path /tmp/io-5470cf.bc -o /tmp/io-faa869.s -x c io.c
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0git default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+ignoring nonexistent directory "/include"
+ignoring duplicate directory "/home/mcornelius/clang/lib/clang/14.0.0/include"
+ignoring duplicate directory "/usr/local/include"
+ignoring duplicate directory "/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include"
+ignoring duplicate directory "/usr/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /soft/compilers/cuda/cuda-10.1.243/include
+ /home/mcornelius/clang/lib/clang/14.0.0/include/openmp_wrappers
+ /home/mcornelius/clang/lib/clang/14.0.0/include
+ /usr/local/include
+ /usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include
+ /usr/include
+End of search list.
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different data layouts: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is '' whereas 'io.c' is 'e-i64:64-i128:128-v16:16-v32:32-n16:32:64'
+ [-Wlinker-warnings]
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different target triples: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is 'nvptx64-nvidia-gpulibs' whereas 'io.c' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+warning: linking module '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc': Linking two modules of different target triples: '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc' is 'nvptx64' whereas 'io.c' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+3 warnings generated.
+ "/soft/compilers/cuda/cuda-10.1.243/bin/ptxas" -m64 -O3 -v --gpu-name sm_70 --output-file /tmp/io-12fa4c.cubin /tmp/io-faa869.s -c
+ptxas info    : 0 bytes gmem
+ "/home/mcornelius/clang/bin/clang-14" -cc1 -triple x86_64-unknown-linux-gnu -emit-obj --mrelax-relocations -disable-free -main-file-name io.c -mrelocation-model static -mframe-pointer=none -menable-no-infs -menable-no-nans -menable-unsafe-fp-math -fno-signed-zeros -mreassociate -freciprocal-math -fdenormal-fp-math=preserve-sign,preserve-sign -ffp-contract=fast -fno-rounding-math -ffast-math -ffinite-math-only -mconstructor-aliases -munwind-tables -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/mcornelius/XSBench-builds/XSBench13-h2shared-h2stack/openmp-offload -resource-dir /home/mcornelius/clang/lib/clang/14.0.0 -Ofast -Rpass=openmp-opt -Rpass-analysis=openmp-opt -fdebug-compilation-dir=/home/mcornelius/XSBench-builds/XSBench13-h2shared-h2stack/openmp-offload -ferror-limit 19 -fopenmp -fgnuc-version=4.2.1 -vectorize-loops -vectorize-slp -mllvm -openmp-opt-disable-folding -mllvm -openmp-opt-disable-spmdization -mllvm -openmp-opt-disable-state-machine-rewrite -fopenmp-targets=nvptx64-nvidia-cuda -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o /tmp/io-08ab63.o -x ir /tmp/io-5470cf.bc
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0git default target x86_64-unknown-linux-gnu
+ "/home/mcornelius/clang/bin/clang-offload-bundler" -type=o -targets=openmp-nvptx64-nvidia-cuda,host-x86_64-unknown-linux-gnu -outputs=io.o -inputs=/tmp/io-12fa4c.cubin,/tmp/io-08ab63.o
+clang -v -Ofast -fopenmp -fopenmp-targets=nvptx64-nvidia-cuda -Xopenmp-target -march=sm_70 -mllvm -openmp-opt-disable-folding -mllvm -openmp-opt-disable-spmdization -mllvm -openmp-opt-disable-state-machine-rewrite -Rpass=openmp-opt -Rpass-analysis=openmp-opt -c Simulation.c -o Simulation.o
+clang version 14.0.0
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /home/mcornelius/clang/bin
+Found candidate GCC installation: /usr/lib64/gcc/x86_64-suse-linux/7
+Selected GCC installation: /usr/lib64/gcc/x86_64-suse-linux/7
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+Found CUDA installation: /soft/compilers/cuda/cuda-10.1.243, version 10.1
+ "/home/mcornelius/clang/bin/clang-14" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -emit-llvm-uselists -disable-free -main-file-name Simulation.c -mrelocation-model static -mframe-pointer=none -menable-no-infs -menable-no-nans -menable-unsafe-fp-math -fno-signed-zeros -mreassociate -freciprocal-math -fdenormal-fp-math=preserve-sign,preserve-sign -ffp-contract=fast -fno-rounding-math -ffast-math -ffinite-math-only -mconstructor-aliases -munwind-tables -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/mcornelius/XSBench-builds/XSBench13-h2shared-h2stack/openmp-offload -resource-dir /home/mcornelius/clang/lib/clang/14.0.0 -c-isystem /soft/compilers/cuda/cuda-10.1.243/include -internal-isystem /home/mcornelius/clang/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -internal-isystem /home/mcornelius/clang/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Ofast -Rpass=openmp-opt -Rpass-analysis=openmp-opt -fdebug-compilation-dir=/home/mcornelius/XSBench-builds/XSBench13-h2shared-h2stack/openmp-offload -ferror-limit 19 -fopenmp -fgnuc-version=4.2.1 -vectorize-loops -vectorize-slp -mllvm -openmp-opt-disable-folding -mllvm -openmp-opt-disable-spmdization -mllvm -openmp-opt-disable-state-machine-rewrite -disable-llvm-passes -fopenmp-targets=nvptx64-nvidia-cuda -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o /tmp/Simulation-083d18.bc -x c Simulation.c
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0git default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+ignoring nonexistent directory "/include"
+ignoring duplicate directory "/home/mcornelius/clang/lib/clang/14.0.0/include"
+ignoring duplicate directory "/usr/local/include"
+ignoring duplicate directory "/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include"
+ignoring duplicate directory "/usr/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /soft/compilers/cuda/cuda-10.1.243/include
+ /home/mcornelius/clang/lib/clang/14.0.0/include
+ /usr/local/include
+ /usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include
+ /usr/include
+End of search list.
+ "/home/mcornelius/clang/bin/clang-14" -cc1 -triple nvptx64-nvidia-cuda -aux-triple x86_64-unknown-linux-gnu -S -disable-free -main-file-name Simulation.c -mrelocation-model pic -pic-level 2 -fhalf-no-semantic-interposition -mframe-pointer=all -menable-no-infs -menable-no-nans -menable-unsafe-fp-math -fno-signed-zeros -mreassociate -freciprocal-math -ffp-contract=fast -fno-rounding-math -ffast-math -ffinite-math-only -fno-verbose-asm -no-integrated-as -mlink-builtin-bitcode /soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc -target-feature +ptx64 -target-sdk-version=10.1 -mlink-builtin-bitcode /home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc -target-cpu sm_70 -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -fno-dwarf-directory-asm -v -resource-dir /home/mcornelius/clang/lib/clang/14.0.0 -internal-isystem /home/mcornelius/clang/lib/clang/14.0.0/include/openmp_wrappers -include __clang_openmp_device_functions.h -c-isystem /soft/compilers/cuda/cuda-10.1.243/include -internal-isystem /home/mcornelius/clang/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -internal-isystem /home/mcornelius/clang/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Ofast -Rpass=openmp-opt -Rpass-analysis=openmp-opt -fdebug-compilation-dir=/home/mcornelius/XSBench-builds/XSBench13-h2shared-h2stack/openmp-offload -ferror-limit 19 -fopenmp -fgnuc-version=4.2.1 -vectorize-loops -vectorize-slp -mllvm -openmp-opt-disable-folding -mllvm -openmp-opt-disable-spmdization -mllvm -openmp-opt-disable-state-machine-rewrite -fopenmp-is-device -fopenmp-host-ir-file-path /tmp/Simulation-083d18.bc -o /tmp/Simulation-bbe2d9.s -x c Simulation.c
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0git default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+ignoring nonexistent directory "/include"
+ignoring duplicate directory "/home/mcornelius/clang/lib/clang/14.0.0/include"
+ignoring duplicate directory "/usr/local/include"
+ignoring duplicate directory "/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include"
+ignoring duplicate directory "/usr/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /soft/compilers/cuda/cuda-10.1.243/include
+ /home/mcornelius/clang/lib/clang/14.0.0/include/openmp_wrappers
+ /home/mcornelius/clang/lib/clang/14.0.0/include
+ /usr/local/include
+ /usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include
+ /usr/include
+End of search list.
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different data layouts: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is '' whereas 'Simulation.c' is 'e-i64:64-i128:128-v16:16-v32:32-n16:32:64'
+ [-Wlinker-warnings]
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different target triples: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is 'nvptx64-nvidia-gpulibs' whereas 'Simulation.c' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+warning: linking module '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc': Linking two modules of different target triples: '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc' is 'nvptx64' whereas 'Simulation.c' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+Simulation.c:327:9: remark: Moving globalized variable to the stack. [OMP110] [-Rpass=openmp-opt]
+        double dist[12];
+               ^
+Simulation.c:250:10: remark: Moving globalized variable to the stack. [OMP110] [-Rpass=openmp-opt]
+                double xs_vector[5];
+                       ^
+Simulation.c:116:48: remark: Moving globalized variable to the stack. [OMP110] [-Rpass=openmp-opt]
+                           NuclideGridPoint *  nuclide_grids,
+                                               ^
+Simulation.c:327:9: remark: Moving globalized variable to the stack. [OMP110] [-Rpass=openmp-opt]
+        double dist[12];
+               ^
+Simulation.c:116:48: remark: Moving globalized variable to the stack. [OMP110] [-Rpass=openmp-opt]
+                           NuclideGridPoint *  nuclide_grids,
+                                               ^
+Simulation.c:250:10: remark: Moving globalized variable to the stack. [OMP110] [-Rpass=openmp-opt]
+                double xs_vector[5];
+                       ^
+3 warnings generated.
+ "/soft/compilers/cuda/cuda-10.1.243/bin/ptxas" -m64 -O3 -v --gpu-name sm_70 --output-file /tmp/Simulation-530022.cubin /tmp/Simulation-bbe2d9.s -c
+ptxas info    : 8201 bytes gmem
+ptxas info    : Function properties for __kmpc_nvptx_teams_reduce_nowait_v2
+    64 bytes stack frame, 60 bytes spill stores, 60 bytes spill loads
+ptxas info    : Function properties for grid_search_nuclide
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Function properties for _Z22__kmp_invoke_microtaskiiPvPS_m
+    312 bytes stack frame, 308 bytes spill stores, 308 bytes spill loads
+ptxas info    : Function properties for pick_mat
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Function properties for __kmpc_target_init
+    8 bytes stack frame, 8 bytes spill stores, 8 bytes spill loads
+ptxas info    : Function properties for fast_forward_LCG
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Function properties for grid_search
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Function properties for _omp_reduction_list_to_global_copy_func
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Function properties for __kmpc_global_thread_num
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Function properties for LCG_random_double
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Function properties for calculate_micro_xs
+    32 bytes stack frame, 28 bytes spill stores, 28 bytes spill loads
+ptxas info    : Function properties for _omp_reduction_list_to_global_reduce_func
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Function properties for __kmpc_for_static_init_4
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Compiling entry function '__omp_offloading_31_7a068ac7_run_event_based_simulation_l44' for 'sm_70'
+ptxas info    : Function properties for __omp_offloading_31_7a068ac7_run_event_based_simulation_l44
+    72 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 34 registers, 376 bytes cmem[0]
+ptxas info    : Function properties for calculate_macro_xs
+    200 bytes stack frame, 196 bytes spill stores, 196 bytes spill loads
+ "/home/mcornelius/clang/bin/clang-14" -cc1 -triple x86_64-unknown-linux-gnu -emit-obj --mrelax-relocations -disable-free -main-file-name Simulation.c -mrelocation-model static -mframe-pointer=none -menable-no-infs -menable-no-nans -menable-unsafe-fp-math -fno-signed-zeros -mreassociate -freciprocal-math -fdenormal-fp-math=preserve-sign,preserve-sign -ffp-contract=fast -fno-rounding-math -ffast-math -ffinite-math-only -mconstructor-aliases -munwind-tables -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/mcornelius/XSBench-builds/XSBench13-h2shared-h2stack/openmp-offload -resource-dir /home/mcornelius/clang/lib/clang/14.0.0 -Ofast -Rpass=openmp-opt -Rpass-analysis=openmp-opt -fdebug-compilation-dir=/home/mcornelius/XSBench-builds/XSBench13-h2shared-h2stack/openmp-offload -ferror-limit 19 -fopenmp -fgnuc-version=4.2.1 -vectorize-loops -vectorize-slp -mllvm -openmp-opt-disable-folding -mllvm -openmp-opt-disable-spmdization -mllvm -openmp-opt-disable-state-machine-rewrite -fopenmp-targets=nvptx64-nvidia-cuda -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o /tmp/Simulation-ef8c20.o -x ir /tmp/Simulation-083d18.bc
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0git default target x86_64-unknown-linux-gnu
+ "/home/mcornelius/clang/bin/clang-offload-bundler" -type=o -targets=openmp-nvptx64-nvidia-cuda,host-x86_64-unknown-linux-gnu -outputs=Simulation.o -inputs=/tmp/Simulation-530022.cubin,/tmp/Simulation-ef8c20.o
+clang -v -Ofast -fopenmp -fopenmp-targets=nvptx64-nvidia-cuda -Xopenmp-target -march=sm_70 -mllvm -openmp-opt-disable-folding -mllvm -openmp-opt-disable-spmdization -mllvm -openmp-opt-disable-state-machine-rewrite -Rpass=openmp-opt -Rpass-analysis=openmp-opt -c GridInit.c -o GridInit.o
+clang version 14.0.0
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /home/mcornelius/clang/bin
+Found candidate GCC installation: /usr/lib64/gcc/x86_64-suse-linux/7
+Selected GCC installation: /usr/lib64/gcc/x86_64-suse-linux/7
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+Found CUDA installation: /soft/compilers/cuda/cuda-10.1.243, version 10.1
+ "/home/mcornelius/clang/bin/clang-14" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -emit-llvm-uselists -disable-free -main-file-name GridInit.c -mrelocation-model static -mframe-pointer=none -menable-no-infs -menable-no-nans -menable-unsafe-fp-math -fno-signed-zeros -mreassociate -freciprocal-math -fdenormal-fp-math=preserve-sign,preserve-sign -ffp-contract=fast -fno-rounding-math -ffast-math -ffinite-math-only -mconstructor-aliases -munwind-tables -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/mcornelius/XSBench-builds/XSBench13-h2shared-h2stack/openmp-offload -resource-dir /home/mcornelius/clang/lib/clang/14.0.0 -c-isystem /soft/compilers/cuda/cuda-10.1.243/include -internal-isystem /home/mcornelius/clang/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -internal-isystem /home/mcornelius/clang/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Ofast -Rpass=openmp-opt -Rpass-analysis=openmp-opt -fdebug-compilation-dir=/home/mcornelius/XSBench-builds/XSBench13-h2shared-h2stack/openmp-offload -ferror-limit 19 -fopenmp -fgnuc-version=4.2.1 -vectorize-loops -vectorize-slp -mllvm -openmp-opt-disable-folding -mllvm -openmp-opt-disable-spmdization -mllvm -openmp-opt-disable-state-machine-rewrite -disable-llvm-passes -fopenmp-targets=nvptx64-nvidia-cuda -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o /tmp/GridInit-497394.bc -x c GridInit.c
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0git default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+ignoring nonexistent directory "/include"
+ignoring duplicate directory "/home/mcornelius/clang/lib/clang/14.0.0/include"
+ignoring duplicate directory "/usr/local/include"
+ignoring duplicate directory "/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include"
+ignoring duplicate directory "/usr/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /soft/compilers/cuda/cuda-10.1.243/include
+ /home/mcornelius/clang/lib/clang/14.0.0/include
+ /usr/local/include
+ /usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include
+ /usr/include
+End of search list.
+ "/home/mcornelius/clang/bin/clang-14" -cc1 -triple nvptx64-nvidia-cuda -aux-triple x86_64-unknown-linux-gnu -S -disable-free -main-file-name GridInit.c -mrelocation-model pic -pic-level 2 -fhalf-no-semantic-interposition -mframe-pointer=all -menable-no-infs -menable-no-nans -menable-unsafe-fp-math -fno-signed-zeros -mreassociate -freciprocal-math -ffp-contract=fast -fno-rounding-math -ffast-math -ffinite-math-only -fno-verbose-asm -no-integrated-as -mlink-builtin-bitcode /soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc -target-feature +ptx64 -target-sdk-version=10.1 -mlink-builtin-bitcode /home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc -target-cpu sm_70 -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -fno-dwarf-directory-asm -v -resource-dir /home/mcornelius/clang/lib/clang/14.0.0 -internal-isystem /home/mcornelius/clang/lib/clang/14.0.0/include/openmp_wrappers -include __clang_openmp_device_functions.h -c-isystem /soft/compilers/cuda/cuda-10.1.243/include -internal-isystem /home/mcornelius/clang/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -internal-isystem /home/mcornelius/clang/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Ofast -Rpass=openmp-opt -Rpass-analysis=openmp-opt -fdebug-compilation-dir=/home/mcornelius/XSBench-builds/XSBench13-h2shared-h2stack/openmp-offload -ferror-limit 19 -fopenmp -fgnuc-version=4.2.1 -vectorize-loops -vectorize-slp -mllvm -openmp-opt-disable-folding -mllvm -openmp-opt-disable-spmdization -mllvm -openmp-opt-disable-state-machine-rewrite -fopenmp-is-device -fopenmp-host-ir-file-path /tmp/GridInit-497394.bc -o /tmp/GridInit-d7264e.s -x c GridInit.c
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0git default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+ignoring nonexistent directory "/include"
+ignoring duplicate directory "/home/mcornelius/clang/lib/clang/14.0.0/include"
+ignoring duplicate directory "/usr/local/include"
+ignoring duplicate directory "/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include"
+ignoring duplicate directory "/usr/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /soft/compilers/cuda/cuda-10.1.243/include
+ /home/mcornelius/clang/lib/clang/14.0.0/include/openmp_wrappers
+ /home/mcornelius/clang/lib/clang/14.0.0/include
+ /usr/local/include
+ /usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include
+ /usr/include
+End of search list.
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different data layouts: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is '' whereas 'GridInit.c' is 'e-i64:64-i128:128-v16:16-v32:32-n16:32:64'
+ [-Wlinker-warnings]
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different target triples: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is 'nvptx64-nvidia-gpulibs' whereas 'GridInit.c' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+warning: linking module '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc': Linking two modules of different target triples: '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc' is 'nvptx64' whereas 'GridInit.c' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+3 warnings generated.
+ "/soft/compilers/cuda/cuda-10.1.243/bin/ptxas" -m64 -O3 -v --gpu-name sm_70 --output-file /tmp/GridInit-dad11d.cubin /tmp/GridInit-d7264e.s -c
+ptxas info    : 0 bytes gmem
+ "/home/mcornelius/clang/bin/clang-14" -cc1 -triple x86_64-unknown-linux-gnu -emit-obj --mrelax-relocations -disable-free -main-file-name GridInit.c -mrelocation-model static -mframe-pointer=none -menable-no-infs -menable-no-nans -menable-unsafe-fp-math -fno-signed-zeros -mreassociate -freciprocal-math -fdenormal-fp-math=preserve-sign,preserve-sign -ffp-contract=fast -fno-rounding-math -ffast-math -ffinite-math-only -mconstructor-aliases -munwind-tables -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/mcornelius/XSBench-builds/XSBench13-h2shared-h2stack/openmp-offload -resource-dir /home/mcornelius/clang/lib/clang/14.0.0 -Ofast -Rpass=openmp-opt -Rpass-analysis=openmp-opt -fdebug-compilation-dir=/home/mcornelius/XSBench-builds/XSBench13-h2shared-h2stack/openmp-offload -ferror-limit 19 -fopenmp -fgnuc-version=4.2.1 -vectorize-loops -vectorize-slp -mllvm -openmp-opt-disable-folding -mllvm -openmp-opt-disable-spmdization -mllvm -openmp-opt-disable-state-machine-rewrite -fopenmp-targets=nvptx64-nvidia-cuda -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o /tmp/GridInit-c53f70.o -x ir /tmp/GridInit-497394.bc
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0git default target x86_64-unknown-linux-gnu
+ "/home/mcornelius/clang/bin/clang-offload-bundler" -type=o -targets=openmp-nvptx64-nvidia-cuda,host-x86_64-unknown-linux-gnu -outputs=GridInit.o -inputs=/tmp/GridInit-dad11d.cubin,/tmp/GridInit-c53f70.o
+clang -v -Ofast -fopenmp -fopenmp-targets=nvptx64-nvidia-cuda -Xopenmp-target -march=sm_70 -mllvm -openmp-opt-disable-folding -mllvm -openmp-opt-disable-spmdization -mllvm -openmp-opt-disable-state-machine-rewrite -Rpass=openmp-opt -Rpass-analysis=openmp-opt -c XSutils.c -o XSutils.o
+clang version 14.0.0
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /home/mcornelius/clang/bin
+Found candidate GCC installation: /usr/lib64/gcc/x86_64-suse-linux/7
+Selected GCC installation: /usr/lib64/gcc/x86_64-suse-linux/7
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+Found CUDA installation: /soft/compilers/cuda/cuda-10.1.243, version 10.1
+ "/home/mcornelius/clang/bin/clang-14" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -emit-llvm-uselists -disable-free -main-file-name XSutils.c -mrelocation-model static -mframe-pointer=none -menable-no-infs -menable-no-nans -menable-unsafe-fp-math -fno-signed-zeros -mreassociate -freciprocal-math -fdenormal-fp-math=preserve-sign,preserve-sign -ffp-contract=fast -fno-rounding-math -ffast-math -ffinite-math-only -mconstructor-aliases -munwind-tables -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/mcornelius/XSBench-builds/XSBench13-h2shared-h2stack/openmp-offload -resource-dir /home/mcornelius/clang/lib/clang/14.0.0 -c-isystem /soft/compilers/cuda/cuda-10.1.243/include -internal-isystem /home/mcornelius/clang/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -internal-isystem /home/mcornelius/clang/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Ofast -Rpass=openmp-opt -Rpass-analysis=openmp-opt -fdebug-compilation-dir=/home/mcornelius/XSBench-builds/XSBench13-h2shared-h2stack/openmp-offload -ferror-limit 19 -fopenmp -fgnuc-version=4.2.1 -vectorize-loops -vectorize-slp -mllvm -openmp-opt-disable-folding -mllvm -openmp-opt-disable-spmdization -mllvm -openmp-opt-disable-state-machine-rewrite -disable-llvm-passes -fopenmp-targets=nvptx64-nvidia-cuda -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o /tmp/XSutils-bec8de.bc -x c XSutils.c
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0git default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+ignoring nonexistent directory "/include"
+ignoring duplicate directory "/home/mcornelius/clang/lib/clang/14.0.0/include"
+ignoring duplicate directory "/usr/local/include"
+ignoring duplicate directory "/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include"
+ignoring duplicate directory "/usr/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /soft/compilers/cuda/cuda-10.1.243/include
+ /home/mcornelius/clang/lib/clang/14.0.0/include
+ /usr/local/include
+ /usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include
+ /usr/include
+End of search list.
+ "/home/mcornelius/clang/bin/clang-14" -cc1 -triple nvptx64-nvidia-cuda -aux-triple x86_64-unknown-linux-gnu -S -disable-free -main-file-name XSutils.c -mrelocation-model pic -pic-level 2 -fhalf-no-semantic-interposition -mframe-pointer=all -menable-no-infs -menable-no-nans -menable-unsafe-fp-math -fno-signed-zeros -mreassociate -freciprocal-math -ffp-contract=fast -fno-rounding-math -ffast-math -ffinite-math-only -fno-verbose-asm -no-integrated-as -mlink-builtin-bitcode /soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc -target-feature +ptx64 -target-sdk-version=10.1 -mlink-builtin-bitcode /home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc -target-cpu sm_70 -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -fno-dwarf-directory-asm -v -resource-dir /home/mcornelius/clang/lib/clang/14.0.0 -internal-isystem /home/mcornelius/clang/lib/clang/14.0.0/include/openmp_wrappers -include __clang_openmp_device_functions.h -c-isystem /soft/compilers/cuda/cuda-10.1.243/include -internal-isystem /home/mcornelius/clang/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -internal-isystem /home/mcornelius/clang/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Ofast -Rpass=openmp-opt -Rpass-analysis=openmp-opt -fdebug-compilation-dir=/home/mcornelius/XSBench-builds/XSBench13-h2shared-h2stack/openmp-offload -ferror-limit 19 -fopenmp -fgnuc-version=4.2.1 -vectorize-loops -vectorize-slp -mllvm -openmp-opt-disable-folding -mllvm -openmp-opt-disable-spmdization -mllvm -openmp-opt-disable-state-machine-rewrite -fopenmp-is-device -fopenmp-host-ir-file-path /tmp/XSutils-bec8de.bc -o /tmp/XSutils-968ee7.s -x c XSutils.c
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0git default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+ignoring nonexistent directory "/include"
+ignoring duplicate directory "/home/mcornelius/clang/lib/clang/14.0.0/include"
+ignoring duplicate directory "/usr/local/include"
+ignoring duplicate directory "/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include"
+ignoring duplicate directory "/usr/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /soft/compilers/cuda/cuda-10.1.243/include
+ /home/mcornelius/clang/lib/clang/14.0.0/include/openmp_wrappers
+ /home/mcornelius/clang/lib/clang/14.0.0/include
+ /usr/local/include
+ /usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include
+ /usr/include
+End of search list.
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different data layouts: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is '' whereas 'XSutils.c' is 'e-i64:64-i128:128-v16:16-v32:32-n16:32:64'
+ [-Wlinker-warnings]
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different target triples: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is 'nvptx64-nvidia-gpulibs' whereas 'XSutils.c' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+warning: linking module '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc': Linking two modules of different target triples: '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc' is 'nvptx64' whereas 'XSutils.c' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+3 warnings generated.
+ "/soft/compilers/cuda/cuda-10.1.243/bin/ptxas" -m64 -O3 -v --gpu-name sm_70 --output-file /tmp/XSutils-0bf683.cubin /tmp/XSutils-968ee7.s -c
+ptxas info    : 0 bytes gmem
+ "/home/mcornelius/clang/bin/clang-14" -cc1 -triple x86_64-unknown-linux-gnu -emit-obj --mrelax-relocations -disable-free -main-file-name XSutils.c -mrelocation-model static -mframe-pointer=none -menable-no-infs -menable-no-nans -menable-unsafe-fp-math -fno-signed-zeros -mreassociate -freciprocal-math -fdenormal-fp-math=preserve-sign,preserve-sign -ffp-contract=fast -fno-rounding-math -ffast-math -ffinite-math-only -mconstructor-aliases -munwind-tables -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/mcornelius/XSBench-builds/XSBench13-h2shared-h2stack/openmp-offload -resource-dir /home/mcornelius/clang/lib/clang/14.0.0 -Ofast -Rpass=openmp-opt -Rpass-analysis=openmp-opt -fdebug-compilation-dir=/home/mcornelius/XSBench-builds/XSBench13-h2shared-h2stack/openmp-offload -ferror-limit 19 -fopenmp -fgnuc-version=4.2.1 -vectorize-loops -vectorize-slp -mllvm -openmp-opt-disable-folding -mllvm -openmp-opt-disable-spmdization -mllvm -openmp-opt-disable-state-machine-rewrite -fopenmp-targets=nvptx64-nvidia-cuda -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o /tmp/XSutils-66380a.o -x ir /tmp/XSutils-bec8de.bc
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0git default target x86_64-unknown-linux-gnu
+ "/home/mcornelius/clang/bin/clang-offload-bundler" -type=o -targets=openmp-nvptx64-nvidia-cuda,host-x86_64-unknown-linux-gnu -outputs=XSutils.o -inputs=/tmp/XSutils-0bf683.cubin,/tmp/XSutils-66380a.o
+clang -v -Ofast -fopenmp -fopenmp-targets=nvptx64-nvidia-cuda -Xopenmp-target -march=sm_70 -mllvm -openmp-opt-disable-folding -mllvm -openmp-opt-disable-spmdization -mllvm -openmp-opt-disable-state-machine-rewrite -Rpass=openmp-opt -Rpass-analysis=openmp-opt -c Materials.c -o Materials.o
+clang version 14.0.0
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /home/mcornelius/clang/bin
+Found candidate GCC installation: /usr/lib64/gcc/x86_64-suse-linux/7
+Selected GCC installation: /usr/lib64/gcc/x86_64-suse-linux/7
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+Found CUDA installation: /soft/compilers/cuda/cuda-10.1.243, version 10.1
+ "/home/mcornelius/clang/bin/clang-14" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -emit-llvm-uselists -disable-free -main-file-name Materials.c -mrelocation-model static -mframe-pointer=none -menable-no-infs -menable-no-nans -menable-unsafe-fp-math -fno-signed-zeros -mreassociate -freciprocal-math -fdenormal-fp-math=preserve-sign,preserve-sign -ffp-contract=fast -fno-rounding-math -ffast-math -ffinite-math-only -mconstructor-aliases -munwind-tables -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/mcornelius/XSBench-builds/XSBench13-h2shared-h2stack/openmp-offload -resource-dir /home/mcornelius/clang/lib/clang/14.0.0 -c-isystem /soft/compilers/cuda/cuda-10.1.243/include -internal-isystem /home/mcornelius/clang/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -internal-isystem /home/mcornelius/clang/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Ofast -Rpass=openmp-opt -Rpass-analysis=openmp-opt -fdebug-compilation-dir=/home/mcornelius/XSBench-builds/XSBench13-h2shared-h2stack/openmp-offload -ferror-limit 19 -fopenmp -fgnuc-version=4.2.1 -vectorize-loops -vectorize-slp -mllvm -openmp-opt-disable-folding -mllvm -openmp-opt-disable-spmdization -mllvm -openmp-opt-disable-state-machine-rewrite -disable-llvm-passes -fopenmp-targets=nvptx64-nvidia-cuda -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o /tmp/Materials-6e8510.bc -x c Materials.c
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0git default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+ignoring nonexistent directory "/include"
+ignoring duplicate directory "/home/mcornelius/clang/lib/clang/14.0.0/include"
+ignoring duplicate directory "/usr/local/include"
+ignoring duplicate directory "/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include"
+ignoring duplicate directory "/usr/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /soft/compilers/cuda/cuda-10.1.243/include
+ /home/mcornelius/clang/lib/clang/14.0.0/include
+ /usr/local/include
+ /usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include
+ /usr/include
+End of search list.
+ "/home/mcornelius/clang/bin/clang-14" -cc1 -triple nvptx64-nvidia-cuda -aux-triple x86_64-unknown-linux-gnu -S -disable-free -main-file-name Materials.c -mrelocation-model pic -pic-level 2 -fhalf-no-semantic-interposition -mframe-pointer=all -menable-no-infs -menable-no-nans -menable-unsafe-fp-math -fno-signed-zeros -mreassociate -freciprocal-math -ffp-contract=fast -fno-rounding-math -ffast-math -ffinite-math-only -fno-verbose-asm -no-integrated-as -mlink-builtin-bitcode /soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc -target-feature +ptx64 -target-sdk-version=10.1 -mlink-builtin-bitcode /home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc -target-cpu sm_70 -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -fno-dwarf-directory-asm -v -resource-dir /home/mcornelius/clang/lib/clang/14.0.0 -internal-isystem /home/mcornelius/clang/lib/clang/14.0.0/include/openmp_wrappers -include __clang_openmp_device_functions.h -c-isystem /soft/compilers/cuda/cuda-10.1.243/include -internal-isystem /home/mcornelius/clang/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -internal-isystem /home/mcornelius/clang/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Ofast -Rpass=openmp-opt -Rpass-analysis=openmp-opt -fdebug-compilation-dir=/home/mcornelius/XSBench-builds/XSBench13-h2shared-h2stack/openmp-offload -ferror-limit 19 -fopenmp -fgnuc-version=4.2.1 -vectorize-loops -vectorize-slp -mllvm -openmp-opt-disable-folding -mllvm -openmp-opt-disable-spmdization -mllvm -openmp-opt-disable-state-machine-rewrite -fopenmp-is-device -fopenmp-host-ir-file-path /tmp/Materials-6e8510.bc -o /tmp/Materials-651c9f.s -x c Materials.c
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0git default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+ignoring nonexistent directory "/include"
+ignoring duplicate directory "/home/mcornelius/clang/lib/clang/14.0.0/include"
+ignoring duplicate directory "/usr/local/include"
+ignoring duplicate directory "/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include"
+ignoring duplicate directory "/usr/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /soft/compilers/cuda/cuda-10.1.243/include
+ /home/mcornelius/clang/lib/clang/14.0.0/include/openmp_wrappers
+ /home/mcornelius/clang/lib/clang/14.0.0/include
+ /usr/local/include
+ /usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/include
+ /usr/include
+End of search list.
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different data layouts: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is '' whereas 'Materials.c' is 'e-i64:64-i128:128-v16:16-v32:32-n16:32:64'
+ [-Wlinker-warnings]
+warning: linking module '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc': Linking two modules of different target triples: '/soft/compilers/cuda/cuda-10.1.243/nvvm/libdevice/libdevice.10.bc' is 'nvptx64-nvidia-gpulibs' whereas 'Materials.c' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+warning: linking module '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc': Linking two modules of different target triples: '/home/mcornelius/clang/lib/libomptarget-nvptx-sm_70.bc' is 'nvptx64' whereas 'Materials.c' is 'nvptx64-nvidia-cuda'
+ [-Wlinker-warnings]
+3 warnings generated.
+ "/soft/compilers/cuda/cuda-10.1.243/bin/ptxas" -m64 -O3 -v --gpu-name sm_70 --output-file /tmp/Materials-298608.cubin /tmp/Materials-651c9f.s -c
+ptxas info    : 0 bytes gmem
+ "/home/mcornelius/clang/bin/clang-14" -cc1 -triple x86_64-unknown-linux-gnu -emit-obj --mrelax-relocations -disable-free -main-file-name Materials.c -mrelocation-model static -mframe-pointer=none -menable-no-infs -menable-no-nans -menable-unsafe-fp-math -fno-signed-zeros -mreassociate -freciprocal-math -fdenormal-fp-math=preserve-sign,preserve-sign -ffp-contract=fast -fno-rounding-math -ffast-math -ffinite-math-only -mconstructor-aliases -munwind-tables -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/mcornelius/XSBench-builds/XSBench13-h2shared-h2stack/openmp-offload -resource-dir /home/mcornelius/clang/lib/clang/14.0.0 -Ofast -Rpass=openmp-opt -Rpass-analysis=openmp-opt -fdebug-compilation-dir=/home/mcornelius/XSBench-builds/XSBench13-h2shared-h2stack/openmp-offload -ferror-limit 19 -fopenmp -fgnuc-version=4.2.1 -vectorize-loops -vectorize-slp -mllvm -openmp-opt-disable-folding -mllvm -openmp-opt-disable-spmdization -mllvm -openmp-opt-disable-state-machine-rewrite -fopenmp-targets=nvptx64-nvidia-cuda -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o /tmp/Materials-61dafe.o -x ir /tmp/Materials-6e8510.bc
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0git default target x86_64-unknown-linux-gnu
+ "/home/mcornelius/clang/bin/clang-offload-bundler" -type=o -targets=openmp-nvptx64-nvidia-cuda,host-x86_64-unknown-linux-gnu -outputs=Materials.o -inputs=/tmp/Materials-298608.cubin,/tmp/Materials-61dafe.o
+clang -v -Ofast -fopenmp -fopenmp-targets=nvptx64-nvidia-cuda -Xopenmp-target -march=sm_70 -mllvm -openmp-opt-disable-folding -mllvm -openmp-opt-disable-spmdization -mllvm -openmp-opt-disable-state-machine-rewrite -Rpass=openmp-opt -Rpass-analysis=openmp-opt Main.o io.o Simulation.o GridInit.o XSutils.o Materials.o -o XSBench -lm
+clang version 14.0.0
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /home/mcornelius/clang/bin
+Found candidate GCC installation: /usr/lib64/gcc/x86_64-suse-linux/7
+Selected GCC installation: /usr/lib64/gcc/x86_64-suse-linux/7
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+Found CUDA installation: /soft/compilers/cuda/cuda-10.1.243, version 10.1
+ "/home/mcornelius/clang/bin/clang-offload-bundler" -type=o -targets=host-x86_64-unknown-linux-gnu,openmp-nvptx64-nvidia-cuda -inputs=Main.o -outputs=/tmp/Main-99817d.o,/tmp/Main-e28171.cubin -unbundle -allow-missing-bundles
+ "/home/mcornelius/clang/bin/clang-offload-bundler" -type=o -targets=host-x86_64-unknown-linux-gnu,openmp-nvptx64-nvidia-cuda -inputs=io.o -outputs=/tmp/io-59b35b.o,/tmp/io-45c5a6.cubin -unbundle -allow-missing-bundles
+ "/home/mcornelius/clang/bin/clang-offload-bundler" -type=o -targets=host-x86_64-unknown-linux-gnu,openmp-nvptx64-nvidia-cuda -inputs=Simulation.o -outputs=/tmp/Simulation-97fba3.o,/tmp/Simulation-f3c744.cubin -unbundle -allow-missing-bundles
+ "/home/mcornelius/clang/bin/clang-offload-bundler" -type=o -targets=host-x86_64-unknown-linux-gnu,openmp-nvptx64-nvidia-cuda -inputs=GridInit.o -outputs=/tmp/GridInit-526d3d.o,/tmp/GridInit-e979cc.cubin -unbundle -allow-missing-bundles
+ "/home/mcornelius/clang/bin/clang-offload-bundler" -type=o -targets=host-x86_64-unknown-linux-gnu,openmp-nvptx64-nvidia-cuda -inputs=XSutils.o -outputs=/tmp/XSutils-40115b.o,/tmp/XSutils-7f26ac.cubin -unbundle -allow-missing-bundles
+ "/home/mcornelius/clang/bin/clang-offload-bundler" -type=o -targets=host-x86_64-unknown-linux-gnu,openmp-nvptx64-nvidia-cuda -inputs=Materials.o -outputs=/tmp/Materials-9af613.o,/tmp/Materials-a65049.cubin -unbundle -allow-missing-bundles
+ "/soft/compilers/cuda/cuda-10.1.243/bin/nvlink" -o /tmp/Main-e225ce.out -v -arch sm_70 -L/soft/compilers/cuda/cuda-10.1.243/lib64 -L/home/mcornelius/clang/lib /tmp/Main-e28171.cubin /tmp/io-45c5a6.cubin /tmp/Simulation-f3c744.cubin /tmp/GridInit-e979cc.cubin /tmp/XSutils-7f26ac.cubin /tmp/Materials-a65049.cubin
+nvlink info    : 8201 bytes gmem
+nvlink info    : Function properties for '__omp_offloading_31_7a068ac7_run_event_based_simulation_l44':
+nvlink info    : used 154 registers, 384 stack, 2472 bytes smem, 376 bytes cmem[0], 96 bytes cmem[2], 0 bytes lmem
+ "/home/mcornelius/clang/bin/clang-offload-wrapper" -target x86_64-unknown-linux-gnu -o /tmp/XSBench-wrapper-10f214.bc /tmp/Main-e225ce.out
+ "/home/mcornelius/clang/bin/clang-14" -cc1 -triple x86_64-unknown-linux-gnu -emit-obj --mrelax-relocations -disable-free -main-file-name XSBench-wrapper -mrelocation-model static -mframe-pointer=none -menable-no-infs -menable-no-nans -menable-unsafe-fp-math -fno-signed-zeros -mreassociate -freciprocal-math -fdenormal-fp-math=preserve-sign,preserve-sign -ffp-contract=fast -fno-rounding-math -ffast-math -ffinite-math-only -mconstructor-aliases -munwind-tables -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/mcornelius/XSBench-builds/XSBench13-h2shared-h2stack/openmp-offload -resource-dir /home/mcornelius/clang/lib/clang/14.0.0 -Ofast -Rpass=openmp-opt -Rpass-analysis=openmp-opt -fdebug-compilation-dir=/home/mcornelius/XSBench-builds/XSBench13-h2shared-h2stack/openmp-offload -ferror-limit 19 -fopenmp -fgnuc-version=4.2.1 -vectorize-loops -vectorize-slp -mllvm -openmp-opt-disable-folding -mllvm -openmp-opt-disable-spmdization -mllvm -openmp-opt-disable-state-machine-rewrite -fopenmp-targets=nvptx64-nvidia-cuda -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o /tmp/XSBench-wrapper-d83fee.o -x ir /tmp/XSBench-wrapper-10f214.bc
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0git default target x86_64-unknown-linux-gnu
+ "/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld" --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o XSBench /usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64/crt1.o /usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64/crti.o /usr/lib64/gcc/x86_64-suse-linux/7/crtbegin.o /usr/lib64/gcc/x86_64-suse-linux/7/crtfastmath.o -L/usr/lib64/gcc/x86_64-suse-linux/7 -L/usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/lib -L/home/mcornelius/clang/bin/../lib -L/lib -L/usr/lib -L/soft/compilers/cuda/cuda-10.1.243/lib64 /tmp/Main-99817d.o /tmp/io-59b35b.o /tmp/Simulation-97fba3.o /tmp/GridInit-526d3d.o /tmp/XSutils-40115b.o /tmp/Materials-9af613.o -lm /tmp/XSBench-wrapper-d83fee.o -lomp -lomptarget -lgcc --as-needed -lgcc_s --no-as-needed -lpthread -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib64/gcc/x86_64-suse-linux/7/crtend.o /usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64/crtn.o

@@ -1,0 +1,7 @@
+nvcc  -Xcompiler -Wall -Xcompiler -O3 -arch=sm_70 -std=c++11 -O3 -c Main.cu -o Main.o
+nvcc  -Xcompiler -Wall -Xcompiler -O3 -arch=sm_70 -std=c++11 -O3 -c io.cu -o io.o
+nvcc  -Xcompiler -Wall -Xcompiler -O3 -arch=sm_70 -std=c++11 -O3 -c Simulation.cu -o Simulation.o
+nvcc  -Xcompiler -Wall -Xcompiler -O3 -arch=sm_70 -std=c++11 -O3 -c GridInit.cu -o GridInit.o
+nvcc  -Xcompiler -Wall -Xcompiler -O3 -arch=sm_70 -std=c++11 -O3 -c XSutils.cu -o XSutils.o
+nvcc  -Xcompiler -Wall -Xcompiler -O3 -arch=sm_70 -std=c++11 -O3 -c Materials.cu -o Materials.o
+nvcc  -Xcompiler -Wall -Xcompiler -O3 -arch=sm_70 -std=c++11 -O3 Main.o io.o Simulation.o GridInit.o XSutils.o Materials.o -o XSBench -lm
